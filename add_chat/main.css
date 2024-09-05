@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier Gothic', sans-serif;
+}
+
+body {
+    background-color: antiquewhite;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Courier Gothic', sans-serif;
+}
+
+.menu-nav {
+    position: relative;
+    top: 1px;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 50px 50px rgba(0, 0, 0 .1);
+}
+
+/* logo */
+.menu-nav .menutoggle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+
+.menu-nav .perfil {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu-nav .perfil h3 {
+    text-align: end;
+    font-weight: 500;
+    line-height: 1rem;
+    color: #555;
+}
+
+.menu-nav .perfil h3 samp {
+    font-size: .75rem;
+    color: #777;
+}
+
+.menu-nav .perfil .imgcx {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.menu-nav .perfil .imgcx img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.menu-nav .menu {
+    position: absolute;
+    top: calc(100% + 30px);
+    left: 10px;
+    width: 15rem;
+    min-height: 100px;
+    background-color: white;
+    box-shadow: 0 50px 50px rgba(0, 0, 0 .1);
+    user-select: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.menu-nav .menu.ativo {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+.menu-nav .menu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 35px;
+    width: 20px;
+    height: 20px;
+    z-index: -1;
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+.menu-nav .menu ul {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    list-style: none;
+}
+
+.menu-nav .menu ul li {
+    padding: 15px 20px;
+    background: #fff;
+    transition: .30s;
+}
+
+.menu-nav .menu ul li:hover {
+    background: #f5f5f5;
+    transition: .0s;
+}
+
+.menu-nav .menu ul li a {
+    text-decoration: none;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-nav .menu ul li a ion-icon {
+    font-size: 1.25rem;
+    color: #999;
+}
+
+.addcusor{
+    top: 3rem;
+    position: relative;
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.conversas {
+    width: 21rem;
+    height: 7rem;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.conversas img {
+    width: 5rem;
+    height: 5rem;
+    background-color: #fff;
+    border-radius: 17px;
+}
+
+.conversas ul {
+    margin-left: 1rem;
+}
+
+.conversas li {
+    list-style: none;
+    font-size: 1rem;
+}
+
+.conversas h2 {
+    list-style: none;
+    font-size: 1.5rem;
+}
+.add{
+    width: 2rem;
+    height: 2rem;
+    background-color: #4343ec;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 1.7rem;
+    left: 1.5rem;
+    border: black solid 2px;
+}
+.add ion-icon{
+    font-size: 2rem;
+}
+a .add ion-icon {
+    color: black;
+}

@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000e65;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.panel {
+    background-color: #ffffffe7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 50rem;
+}
+
+.panel h2 {
+    background-color: dimgray;
+    color: whitesmoke;
+    padding: 5px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.panel form {
+    margin-bottom: 20px;
+}
+
+.panel label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.panel input[type="text"],
+.panel input[type="email"],
+.panel input[type="password"],
+.panel input[type="permissao"] {
+    width: 40vh;
+    height: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.logar1 {
+    padding: 4px;
+    font-size: 0.5cm;
+    border-radius: 6px;
+}
+
+.panel button {
+    width: 10rem;
+    padding: 10px;
+    background-color: dimgray;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.panel button:hover {
+    background-color: #0056b3;
+}
+
+.extra {
+    margin-bottom: 20px;
+}
+
+.extra p {
+    margin: 0;
+}
+
+.extra a {
+    color: gray;
+    text-decoration: none;
+}
+
+.extra a:hover {
+    text-decoration: underline;
+}
+
+.exit-btn {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    font-size: 0.5cm;
+    border-radius: 8px;
+}
+
+.exit-btn:hover {
+    background-color: #c82333;
+}
+
+#nome {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+
+#nome input {
+    width: 20rem;
+}
+
+.t1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}

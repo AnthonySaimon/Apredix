@@ -71,7 +71,7 @@ $manager = new protocolo();
         <div class="nome">
             <li>Usuarios registrados</li>
 
-            <form method="POST" action="">
+            <form method="POST" action="../Gerenciar_user_add/cadastro.html">
                 <input type="hidden" name="id">
                 <button class="bt_add" type="submit">
                     <ion-icon name="person-add-outline"></ion-icon>

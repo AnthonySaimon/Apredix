@@ -23,7 +23,7 @@
  
         <div class="menutoggle" id="menutoggle"></div>
    
-
+      
         <div class="perfil">
             <h3>Usuario <br><samp>aaaaa</samp></h3>
             <div class="imgcx">
@@ -107,10 +107,12 @@
                         <a class="compra" href="">
                             <li>Compra</li>
                         </a>
-                        <a class="compra" href="">
-                            <li>Carinho</li>
-                        </a>
-                        <a href=""></a>
+                        <div class="carrinho">
+                            <a href="carrinho.html" target="_blank" rel="noopener noreferrer" class="carrinho">
+                                <li>Carrinho</li>
+                            </a>
+                            
+                        </div>
                     </div>
 
                 </div>
@@ -122,65 +124,70 @@
         <div class="comnome">
             <h2>COMENTARIOS</h2>
         </div>
-
-        <div class="fscoment">
+    
+        <div class="fscoment" id="comentario-1">
             <div class="user">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s"
-                    alt="">
-                <h2>Nome de usuario</h2>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="">
+                <h2 id="usuario-1">Nome de usuario</h2>
             </div>
-
+    
             <div class="input-container">
-                <form action=""  class="input-container">
-                    <input type="text" id="input" required="">
-                    <label for="input" class="label">Escreva Aqui</label>
+                <form action="" class="input-container" id="comentario-form">
+                    <input type="text" id="input-comentario" required="">
+                    <label for="input-comentario" class="label">Escreva Aqui</label>
                     <div class="underline"></div>
-                    <button class="buteviar"> <img src="../imagem/bxs-send.png" alt=""> </button>
+                    <button class="buteviar" type="submit"> <img src="../imagem/bxs-send.png" alt=""> </button>
                 </form>
             </div>
-
-
         </div>
+    
+        
 
-        <div class="fscoment">
-            <div class="user">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s"
-                    alt="">
-                <h2>Nome de usuario</h2>
+               
             </div>
-
-            <div class="comentario">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                In luctus iaculis leo in tempor. Fusce quis eros lectus. 
-                Maecenas a euismod tortor. Mauris nunc quam, viverra ut volutpat ac,
-                 maximus ac nunc. Etiam mattis ligula a sapien sollicitudin,
-                  vitae faucibus ante laoreet. Maecenas non elit hendrerit, 
-                  pretium lectus eu, mattis velit. 
-                  Pellentesque facilisis libero non elit sodales semper.
-                 Donec mi nisi, molestie id libero placerat, imperdiet tempus ligula.
-                 Nulla vel interdum metus. Cras eu interdum velit. Donec magna nibh, 
-                 semper non vestibulum a, auctor non lectus. Fusce sed finibus est.
-                Proin rhoncus efficitur rhoncus. orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                orem ipsum dolor sit amet, consectetur adipiscing elit. 
+    
+            
             </div>
-
         </div>
-
-        <div class="fscoment">
-            <div class="user">
-                <img src="https://img.freepik.com/fotos-premium/avatar-masculino-de-anime_950633-993.jpg"
-                    alt="">
-                <h2>Nome do outro usuario</h2>
+    
+       
             </div>
-
-            <div class="comentario">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                In luctus iaculis leo in tempor. Fusce quis eros lectus. 
+    
+            
             </div>
-
         </div>
     </div>
-
+    
+    <script>
+        document.getElementById('comentario-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            // Get the input value
+            const comentarioText = document.getElementById('input-comentario').value;
+            
+            // Example: You might use a real username here
+            const usuarioNome = "Nome de usuario";
+    
+            // Create a new comment element
+            const novoComentario = document.createElement('div');
+            novoComentario.className = 'fscoment';
+            novoComentario.innerHTML = `
+                <div class="user">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="">
+                    <h2>${usuarioNome}</h2>
+                </div>
+                <div class="comentario">
+                    ${comentarioText}
+                </div>
+            `;
+    
+            // Append the new comment
+            document.querySelector('.comentarios').appendChild(novoComentario);
+    
+            // Clear the input
+            document.getElementById('input-comentario').value = '';
+        });
+    </script>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

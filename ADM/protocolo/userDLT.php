@@ -8,11 +8,11 @@ if (isset($_POST['id'])) {
     $manager->delete_client($id);
 
     // Redirecione ou faça algo após a exclusão
-    header("Location: ../Gerenciar_user/index.php?erro3");
+    header("Location: ../Gerenciar_user/index.php?success");
     exit;
 } else {
     // Caso o ID não esteja definido
-    header("Location: ../Gerenciar_user/index.php?erro4");
+    header("Location: ../Gerenciar_user/index.php?error");
     exit;
 }
 ?>

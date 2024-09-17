@@ -60,26 +60,6 @@ class protocolo extends Conexao
             header("Location: ../Gerenciar_user/index.php?erro2");
         }
     }
-    public function Ban_client($data)
-    {
-        if (isset($data['id']) && isset($data['nome']) && isset($data['sobrenome']) && isset($data['email']) && isset($data['senha']) && isset($data['permissao'])) {
-            $pdo = parent::get_instance();
-            $sql = "UPDATE usuario 
-                    SET nome = :nome, sobrenome = :sobrenome, email = :email, senha = :senha, permissao = :permissao
-                    WHERE id = :id";
-            $statement = $pdo->prepare($sql);
-            $statement->bindValue(":id", $data['id'], PDO::PARAM_STR);
-            $statement->bindValue(":nome", $data['nome'], PDO::PARAM_STR);
-            $statement->bindValue(":sobrenome", $data['sobrenome'], PDO::PARAM_STR);
-            $statement->bindValue(":email", $data['email'], PDO::PARAM_STR);
-            $statement->bindValue(":senha", $data['senha'], PDO::PARAM_STR);
-            $statement->bindValue(":permissao", "Banido");
-
-            $statement->execute();
-        } else {
-            header("Location: ../Gerenciar_user/index.php?erro2");
-        }
-    }
     public function delete_client($id)
     {
 

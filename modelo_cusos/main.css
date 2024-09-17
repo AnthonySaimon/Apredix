@@ -34,7 +34,20 @@ body {
     overflow: hidden;
 }
 
-
+.carrinho{
+    width: 7rem;
+    height: 3.5rem;
+    background-color: #ccc;
+    display: flex;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
 .menu-nav .perfil {
     display: flex;
     justify-content: flex-end;

@@ -37,8 +37,6 @@
                             echo  '<h3>Senha incorreta.</h3>';
                         } elseif ($erro == 2) {
                             echo '<h3>Email não encontrado.</h3>';
-                        }elseif ($erro == 3) {
-                            echo '<h3>Você Foi Banido.</h3>';
                         }
                     }
                     ?>

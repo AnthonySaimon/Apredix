@@ -20,9 +20,16 @@
 <body>
 
     <nav class="menu-nav">
-       
-        <div class="menutoggle" id="menutoggle"></div>
-    
+
+        <div class="menutoggle" id="menutoggle">
+            <label for="check" class="menuButton">
+                <input id="check" type="checkbox">
+                <span class="top"></span>
+                <span class="mid"></span>
+                <span class="bot"></span>
+            </label>
+        </div>
+
 
         <div class="perfil">
             <h3>Usuario <br><samp>aaaaa</samp></h3>
@@ -54,19 +61,34 @@
                 </li>
 
                 <li>
-                    <a href="../index.php">
-                        <ion-icon name="log-out-outline"></ion-icon>
-                        Deslogar
+                    <a href="../modelo_cusos/carrinho.html">
+                        <ion-icon name="bag-outline"></ion-icon> Carrinho
                     </a>
                 </li>
+
+                <div class="menuextra">
+
+                    <li class="menuextrali">
+                        <a href="../sair.php">
+                            <ion-icon name="log-out-outline"></ion-icon> Deslogar
+                        </a>
+                    </li>
+
+                    <li class="menuextrali2">
+                        <a href="../home/index.php">
+                            <ion-icon name="home-outline"></ion-icon> Home
+                        </a>
+                    </li>
+
+                </div>
 
             </ul>
         </div>
     </nav>
 
-   
 
-    
+
+
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

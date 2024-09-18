@@ -7,6 +7,13 @@ menutoggle.addEventListener('click', () => {
 
 })
 
+const menutoggle2 = document.getElementById('check');
+const menu2= document.querySelector('.menu');
+
+menutoggle2.addEventListener('click', () => {
+    menu.classList.toggle('ativo')
+
+})
 //carrosel de imagem (tempo de trasisao)
 let count = 1;
 document.getElementById("radio1").checked = true;

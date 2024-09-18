@@ -1,4 +1,4 @@
-<?php
+,<?php
   session_start();
 // Conexão com o banco de dados
 $servername = "localhost";
@@ -30,17 +30,19 @@ if ($result->num_rows == 1) {
         // Redirecionar para a página de sucesso
         if ($row['permissao'] === "ADM") {
 
-            
             $_SESSION['usuario'] = $resutado['nome'];
             $_SESSION['permissao'] = $resutado['permissao'];
             header("Location: ./adm/index.php");
 
-        } else {
+        } elseif ($row['permissao'] === "Use Premium" && "Use Free") {
 
             $_SESSION['usuario'] = $resutado['nome'];
             $_SESSION['permissao'] = $resutado['permissao'];
             header("Location: ./home/index.php");
             exit();
+        }
+        elseif ($row['permissao'] === "Banido") {
+            header("Location: ./BAM/index.html");
         }
     } else {
         header("Location: index.php?erro=1");

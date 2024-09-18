@@ -29,22 +29,19 @@ if ($result->num_rows == 1) {
         // Verificar a senha sem criptografia
         // Redirecionar para a página de sucesso
         if ($row['permissao'] === "ADM") {
+
             
             $_SESSION['usuario'] = $resutado['nome'];
             $_SESSION['permissao'] = $resutado['permissao'];
             header("Location: ./adm/index.php");
 
-        } elseif ($row['permissao'] === "Use Premium" && "Use Free") {
+        } else {
 
             $_SESSION['usuario'] = $resutado['nome'];
             $_SESSION['permissao'] = $resutado['permissao'];
             header("Location: ./home/index.php");
             exit();
         }
-        elseif ($row['permissao'] === "Banido") {
-            header("Location: ./BAM/index.html");
-        }
-
     } else {
         header("Location: index.php?erro=1");
     }

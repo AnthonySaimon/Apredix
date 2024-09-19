@@ -12,7 +12,7 @@
      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
      <title>Aprendix</title>
      <meta name='viewport' content='width=device-width, initial-scale=1'>
-     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+     <link rel='stylesheet' type='text/css' media='screen' href='Main.css'>
      <link rel='stylesheet' type='text/css' media='screen' href='main0.css'>
      <link rel="shortcut icon" href="../../imagem/Logo-aprendix.png" type="image/ico" />
 
@@ -24,50 +24,72 @@
 
  <body>
 
-     <nav class="menu-nav">
+ <nav class="menu-nav">
         
-     <div class="menutoggle" id="menutoggle"></div>
-
-         <div class="perfil">
-             <h3>Usuario <br><samp>aaaaa</samp></h3>
-             <div class="imgcx">
-                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s"
-                     alt="...">
-             </div>
-         </div>
-         <div class="menu">
-             <ul>
-                 <li>
-                     <a href="../Gerenciar_user/index.php">
-                         <ion-icon name="body-outline"></ion-icon>
-                         Gerenciar Usuario
-                     </a>
-                 </li>
-
-                 <li>
-                     <a href="">
-                         <ion-icon name="chatbox-ellipses-outline"></ion-icon>
-                         Adiministra Chat
-                     </a>
-                 </li>
-
-                 <li>
-                     <a href="../../configuracao/index.html">
-                         <ion-icon name="settings-outline"></ion-icon>
-                         Comfiguração
-                     </a>
-                 </li>
-
-                 <li>
-                     <a href="../../sair.php">
-                         <ion-icon name="log-out-outline"></ion-icon>
-                         Deslogar
-                     </a>
-                 </li>
-
-             </ul>
-         </div>
-     </nav>
+        <div class="menutoggle" id="menutoggle">
+                <label for="check" class="menuButton">
+                    <input id="check" type="checkbox">
+                    <span class="top"></span>
+                    <span class="mid"></span>
+                    <span class="bot"></span>
+                </label>
+            </div>
+    
+            <div class="perfil">
+                <h3>Usuario <br><samp>aaaaa</samp></h3>
+                <div class="imgcx">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s"
+                        alt="...">
+                </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="../Gerenciar_user/index.php">
+                            <ion-icon name="body-outline"></ion-icon>
+                            Gerenciar Usuario
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="">
+                            <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                            Adiministra Chat
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="../../configuracao/index.html">
+                            <ion-icon name="settings-outline"></ion-icon>
+                            Comfiguração
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="">
+                            ---
+                        </a>
+                    </li>
+    
+                    <div class="menuextra">
+    
+                        <li class="menuextrali">
+                            <a href="../../sair.php">
+                                <ion-icon name="log-out-outline"></ion-icon> Deslogar
+                            </a>
+                        </li>
+    
+                        <li class="menuextrali2">
+                            <a href="../index.php">
+                                <ion-icon name="home-outline"></ion-icon> Home
+                            </a>
+                        </li>
+    
+                    </div>
+    
+                </ul>
+            </div>
+        </nav>
 
      <form action="../protocolo/userUP.php" class="aba1" method="POST">
          <div class="lado1">

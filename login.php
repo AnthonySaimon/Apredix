@@ -34,7 +34,14 @@ if ($result->num_rows == 1) {
             $_SESSION['permissao'] = $resutado['permissao'];
             header("Location: ./adm/index.php");
 
-        } elseif ($row['permissao'] === "Use Premium" && "Use Free") {
+        } elseif ($row['permissao'] === "Use Premium") {
+
+            $_SESSION['usuario'] = $resutado['nome'];
+            $_SESSION['permissao'] = $resutado['permissao'];
+            header("Location: ./home/index.php");
+            exit();
+        }
+        elseif ($row['permissao'] ===  "Use Free") {
 
             $_SESSION['usuario'] = $resutado['nome'];
             $_SESSION['permissao'] = $resutado['permissao'];

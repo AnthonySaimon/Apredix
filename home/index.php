@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -7,15 +6,23 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Aprendix</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Main.css'>
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
 </head>
 
 <body>
 
     <nav class="menu-nav">
-        <div id="menutoggle">
+
+        <div class="menutoggle" id="menutoggle">
+            <label for="check" class="menuButton">
+                <input id="check" type="checkbox">
+                <span class="top"></span>
+                <span class="mid"></span>
+                <span class="bot"></span>
+            </label>
         </div>
+
 
         <div class="perfil">
             <h3>Usuario <br><samp>aaaaa</samp></h3>
@@ -47,15 +54,32 @@
                 </li>
 
                 <li>
-                    <a href="../sair.php">
-                        <ion-icon name="log-out-outline"></ion-icon>
-                        Deslogar
+                    <a href="../modelo_cusos/carrinho.html">
+                        <ion-icon name="bag-outline"></ion-icon> Carrinho
                     </a>
                 </li>
+
+                <div class="menuextra">
+
+                    <li class="menuextrali">
+                        <a href="../sair.php">
+                            <ion-icon name="log-out-outline"></ion-icon> Deslogar
+                        </a>
+                    </li>
+
+                    <li class="menuextrali2">
+                        <a href="../home/index.php">
+                            <ion-icon name="home-outline"></ion-icon> Home
+                        </a>
+                    </li>
+
+                </div>
 
             </ul>
         </div>
     </nav>
+
+
 
     <div class="slider">
 
@@ -139,7 +163,7 @@
                 <a href="../modelo_cusos/index.html">
                     <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
-            </div>  
+            </div>
 
         </div>
 
@@ -182,7 +206,7 @@
                 <a href="../modelo_cusos/index.html">
                     <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
-            </div>  
+            </div>
 
         </div>
 

@@ -1,4 +1,5 @@
 * {
+    list-style: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -218,126 +219,155 @@ input[type]:checked~span.mid {
     opacity: 0;
 }
 
-
-.chat-elemento {
-    margin: 0.5rem;
-    width: 98.9%;
-    height: 50rem;
-    background-color: #555;
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    ;
-}
-
-.aba-chat {
-    width: 20%;
-    min-height: 45rem;
-    background-color: #777;
-    border-radius: 25px;
-    padding: 1rem;
+.user{
+    z-index: 1;
+    position: relative;
+    width: 85%;
+    background-color: #666;
+    top: 4rem;
+    left: 8.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
+    border-radius: 15px;
 }
 
-.aba-chat .conversas {
-    width: 95%;
-    height: 6rem;
-    background-color: #D9D9D9;
-    border-radius: 15px;
+.nome{
+    width: 100%;
+    height: 5.5rem;
+    background-color: #999;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
-    padding: 1rem;
-    margin-top: 1rem;
-}
-
-.aba-chat .conversas img {
-    width: 5rem;
-    height: 5rem;
-    background-color: #fff;
-    border-radius: 17px;
-}
-
-.aba-chat .conversas ul {
-    margin-left: 1rem;
-}
-
-.aba-chat .conversas li {
-    list-style: none;
-    font-size: 1rem;
-}
-
-.aba-chat .conversas h2 {
-    list-style: none;
-    font-size: 1.5rem;
-}
-
-.chat {
-    width: 75%;
-    height: 90%;
-    background-color: #f5f5f5;
+    justify-content: center;
     border-radius: 25px;
 }
+.nome li{
+    font-size: 3rem;
 
-.addchat ion-icon {
-    font-size: 4rem;
-    color: white;
 }
 
-
-.addchat {
-    width: 5rem;
-    height: 5rem;
+.elemuser{
+    width: 90%;
+    height: 7rem;
     background-color: #ccc;
     border-radius: 15px;
+    margin-bottom: 1rem;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 1rem;
+    justify-content: space-between;
 }
-.chat .caixachat{
-    width: 50rem;
-    height: 4rem;
-    background-color: #666;
-    border-radius: 15px;
-    position: relative;
+.elemuser .aba1 img{
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+}
+.aba1{
+    width: 30%;
+    height: 90%;
     display: flex;
-    align-items: center;
-    top: 90%;
-    left: 20%;
-    padding: 1rem;
+    border-right:  #555 solid 0.2rem;
 }
 
-.input {
-    color: #acacac;
-    background-color: #212121;
-    width: 50rem;
-    height: 40px;
-    padding: 10px;
-    border: 2px solid white;
-    border-radius: 5px;
-  }
-  
-  .input:focus {
-    color: rgb(255, 255, 255);
-    background-color: #212121;
-    outline-color: rgb(255, 255, 255);
-    transition: .1s;
-    transition-property: box-shadow;
-  }
-  .buteviar {
-    margin-left: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50px;
-    padding: 0.5rem;
-    border: none;
-    background-color: #8b8b8b;
+.nomeuser{
+    display: flex;
+    padding: 1rem;
+}
+.nomeuser li{ 
+    margin-left: 7px;
+    margin-top: 0.2rem;
+}
+.aba2{
+    width: 10rem;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+.aba2 form{
+    margin: 0.2rem;
+}
+.bt_edt{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10px;
+    background-color: #f5b835;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-  }
-  .buteviar:hover{
-    transition: 0.5s;
-    background-color: rgb(91, 170, 91);
+}
+.bt_edt ion-icon {
+    font-size: 1.5rem;
+    color: black;
+}
+.bt_dlt{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10px;
+    background-color: #e66565;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+} 
+.bt_dlt ion-icon {
+    font-size: 1.5rem;
+    color: black;
+}
+.bt_bam{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10px;
+    background-color: #0032bb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+} 
+.bt_bam ion-icon {
+    font-size: 1.5rem;
+    color: black;
+}
+.bt_add{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10px;
+    background-color: #3b6fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    left: 33rem;
+    position: relative;
+} 
+.bt_add ion-icon {
+    font-size: 1.5rem;
+    color: black;
+}
+.E{
+    display: flex;
+    border-radius: 15px;
+    background-color: #ff5454;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+}
+.C{
+    display: flex;
+    border-radius: 15px;
+    background-color: #40ffa6;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+}
+.E ion-icon {
+    margin-left: 0.4rem;
+  font-size: 1.4rem;
+   color: black;
+}
+.C ion-icon {
+   margin-left: 0.4rem;
+   font-size: 1.4rem;
+   color: black;
 }

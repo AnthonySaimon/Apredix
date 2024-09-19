@@ -26,16 +26,6 @@ body {
     box-shadow: 0 50px 50px rgba(0, 0, 0 .1);
 }
 
-/* logo */
-.menu-nav #menutoggle {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    background-color: #ccc;
-    overflow: hidden;
-    cursor: pointer;
-}
-
 
 .menu-nav .perfil {
     display: flex;
@@ -77,8 +67,8 @@ body {
 
 .menu-nav .menu {
     position: absolute;
-    top: calc(100% + 30px);
-    left: 10px;
+    top: calc(100% + 10px);
+    left: -10rem;
     width: 15rem;
     min-height: 100px;
     background-color: white;
@@ -93,36 +83,32 @@ body {
     opacity: 1;
     visibility: visible;
     z-index: 2;
-}
-
-.menu-nav .menu::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    right: 35px;
-    width: 20px;
-    height: 20px;
-    z-index: -1;
-    background-color: white;
-    transform: rotate(45deg);
+    width: 17rem;
+    height: 22rem;
+    left: 10px;
 }
 
 .menu-nav .menu ul {
     display: flex;
+    align-items: center;
     flex-direction: column;
     background-color: #fff;
     list-style: none;
 }
 
 .menu-nav .menu ul li {
+    width: 90%;
+    background-color: #f1f1f1;
     padding: 15px 20px;
-    background: #fff;
     transition: .30s;
+    margin-top: 1rem;
+    border-radius: 15px;
 }
 
 .menu-nav .menu ul li:hover {
-    background: #f5f5f5;
-    transition: .0s;
+    transition: 0.5s;
+    border: black solid 0.1px;
+    background: #adc0ff;
 }
 
 .menu-nav .menu ul li a {
@@ -135,7 +121,102 @@ body {
 
 .menu-nav .menu ul li a ion-icon {
     font-size: 1.25rem;
-    color: #999;
+    color: #000000;
+}
+
+.menuextra {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.menu-nav .menu .menuextra .menuextrali {
+    width: 12rem;
+    background-color: #f1f1f1;
+    padding: 15px 20px;
+    transition: .30s;
+    margin-top: 1rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+.menu-nav .menu .menuextra .menuextrali:hover {
+    background-color: #fd8c8c;
+    transition: 0.7s;
+}
+
+.menu-nav .menu .menuextra .menuextrali2 {
+    width: 12rem;
+    background-color: #f1f1f1;
+    padding: 15px 20px;
+    transition: .30s;
+    margin-top: 1rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+.menu-nav .menu .menuextra .menuextrali2:hover {
+    background-color: #8cbdfd;
+    transition: 0.7s;
+}
+
+
+.menuButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 13%;
+    color: #090909;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #ffffff;
+}
+
+.menuButton:hover {
+    border: 1px solid white;
+}
+
+.menuButton:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+        inset -4px -4px 12px #ffffff;
+}
+
+input[type="checkbox"] {
+    /* -webkit-appearance: none; */
+    display: none;
+    visibility: hidden;
+}
+
+.menuButton span {
+    width: 30px;
+    height: 4px;
+    background: #131313;
+    border-radius: 100px;
+    transition: 0.3s ease;
+}
+
+input[type]:checked~span.top {
+    transform: translateY(290%)rotate(45deg);
+    width: 40px;
+}
+
+input[type]:checked~span.bot {
+    transform: translateY(-270%) rotate(-45deg);
+    width: 40px;
+    box-shadow: 0 0 10px #495057;
+}
+
+input[type]:checked~span.mid {
+    transform: translateX(-20px);
+    opacity: 0;
 }
 
 

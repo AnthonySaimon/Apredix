@@ -1,3 +1,7 @@
+<?php
+include '../ProtocoloUser/protocolouser.php';
+$manager = new protocoloUser();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +10,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Aprendix</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Main.css'>
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,10 +24,10 @@
 <body>
 
     <nav class="menu-nav">
- 
+
         <div class="menutoggle" id="menutoggle"></div>
-   
-      
+
+
         <div class="perfil">
             <h3>Usuario <br><samp>aaaaa</samp></h3>
             <div class="imgcx">
@@ -111,7 +115,7 @@
                             <a href="carrinho.html" target="_blank" rel="noopener noreferrer" class="carrinho">
                                 <li>Carrinho</li>
                             </a>
-                            
+
                         </div>
                     </div>
 
@@ -124,69 +128,68 @@
         <div class="comnome">
             <h2>COMENTARIOS</h2>
         </div>
-    
+
         <div class="fscoment" id="comentario-1">
             <div class="user">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="">
                 <h2 id="usuario-1">Nome de usuario</h2>
             </div>
-    
+
             <div class="input-container">
-                <form action="" class="input-container" id="comentario-form">
-                    <input type="text" id="input-comentario" required="">
+                <form action="../ProtocoloUser/adddcommit.php"  method="POST"  class="input-container" id="comentario-form">
+                    <input type="text" name="comentario" id="input-comentario" required="">
                     <label for="input-comentario" class="label">Escreva Aqui</label>
                     <div class="underline"></div>
                     <button class="buteviar" type="submit"> <img src="../imagem/bxs-send.png" alt=""> </button>
                 </form>
             </div>
         </div>
-    
-        
 
-               
+
+        <?php foreach ($manager->list_client() as $data) : ?>
+        <div class="fscoment">
+            <div class="user">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="User">
+                <h2>Nome de usuario</h2>
             </div>
-    
-            
-            </div>
-        </div>
-    
-       
-            </div>
-    
-            
+            <div class="comentario">
+            <?= $data['comentario'] ?>
             </div>
         </div>
+        <?php endforeach; ?>
+
     </div>
-    
+
+
     <script>
-        document.getElementById('comentario-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-    
-            // Get the input value
-            const comentarioText = document.getElementById('input-comentario').value;
-            
-            // Example: You might use a real username here
-            const usuarioNome = "Nome de usuario";
-    
-            // Create a new comment element
-            const novoComentario = document.createElement('div');
-            novoComentario.className = 'fscoment';
-            novoComentario.innerHTML = `
-                <div class="user">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="">
-                    <h2>${usuarioNome}</h2>
-                </div>
-                <div class="comentario">
-                    ${comentarioText}
-                </div>
-            `;
-    
-            // Append the new comment
-            document.querySelector('.comentarios').appendChild(novoComentario);
-    
-            // Clear the input
-            document.getElementById('input-comentario').value = '';
-        });
+        // document.getElementById('comentario-form').addEventListener('submit', function(event) {
+        //     event.preventDefault();
+
+        //     // Get the input value
+        //     const comentarioText = document.getElementById('input-comentario').value;
+
+        //     // Example: You might use a real username here
+        //     const usuarioNome = "Nome de usuario";
+
+        //     // Create a new comment element
+        //     const novoComentario = document.createElement('div');
+        //     novoComentario.className = 'fscoment';
+        //     novoComentario.innerHTML = `
+        //         <div class="user">
+        //             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="">
+        //             <h2>${usuarioNome}</h2>
+        //         </div>
+        //         <div class="comentario">
+        //             ${comentarioText}
+        //         </div>
+        //     `;
+
+        //     // Append the new comment
+        //     document.querySelector('.comentarios').appendChild(novoComentario);
+
+        //     // Clear the input
+        //     document.getElementById('input-comentario').value = '';
+        // });
     </script>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

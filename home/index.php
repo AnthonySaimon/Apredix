@@ -23,14 +23,15 @@
             </label>
         </div>
 
-
-        <div class="perfil">
-            <h3>Usuario <br><samp>aaaaa</samp></h3>
-            <div class="imgcx">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s"
-                    alt="...">
+        <a href="../User/Index.html">
+            <div class="perfil">
+                <h3>Usuario <br><samp>aaaaa</samp></h3>
+                <div class="imgcx">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="...">
+                </div>
             </div>
-        </div>
+        </a>
+
         <div class="menu">
             <ul>
                 <li>
@@ -132,8 +133,8 @@
 
             <div class="elemento">
                 <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="../modelo_cusos/index.html">
-                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                <a href="../modelo_cusos/index.php">
+                <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 

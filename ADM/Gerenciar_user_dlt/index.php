@@ -43,6 +43,7 @@ $manager = new protocolo();
                 <input name="email" placeholder="Email" class="input-style" type="email" value="<?= htmlspecialchars($data['email']) ?>"disabled>
                 <input name="senha" class="input-style" value="<?= htmlspecialchars($data['senha']) ?>"disabled>
                 <input list="browsers" name="permissao" class="input-style" value="<?= htmlspecialchars($data['permissao']) ?>"disabled>
+                
                 <datalist id="browsers">
                     <option value="ADM">
                     <option value="Use Free">

@@ -276,9 +276,12 @@ input[type]:checked~span.mid {
 
 .chat {
     width: 75%;
-    height: 90%;
+    height: calc(100% - 100px); /* Ajustar a altura da chat */
     background-color: #f5f5f5;
     border-radius: 25px;
+    display: flex;
+    flex-direction: column; /* Alinha a caixa de mensagens e a caixachat verticalmente */
+    position: relative; /* Para posicionamento absoluto da caixachat */
 }
 
 .addchat ion-icon {
@@ -297,29 +300,28 @@ input[type]:checked~span.mid {
     align-items: center;
     margin-top: 1rem;
 }
-.chat .caixachat{
-    width: 50rem;
-    height: 4rem;
+
+
+.chat .caixachat {
+    width: 100%; /* Largura total da caixa de chat */
+    height: 50px; /* Altura fixa para a caixa de texto */
     background-color: #666;
     border-radius: 15px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    top: 90%;
-    left: 20%;
-    padding: 1rem;
+    display: flex; /* Usar flexbox para alinhar os elementos */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 0.5rem; /* Espaçamento interno */
+    margin-top: auto; /* Empurra a caixa de texto para baixo */
 }
-
 .input {
     color: #acacac;
     background-color: #212121;
-    width: 50rem;
-    height: 40px;
+    flex: 1; /* Para que a caixa de texto ocupe o espaço disponível */
+    height: 40px; /* Altura da caixa de texto */
     padding: 10px;
     border: 2px solid white;
     border-radius: 5px;
-  }
-  
+}
+
   .input:focus {
     color: rgb(255, 255, 255);
     background-color: #212121;
@@ -327,17 +329,122 @@ input[type]:checked~span.mid {
     transition: .1s;
     transition-property: box-shadow;
   }
-  .buteviar {
-    margin-left: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
+  .buteviar, .add-button {
+    margin-left: 10px; /* Espaçamento entre o campo de texto e os botões */
+    width: 40px; /* Largura dos botões */
+    height: 40px; /* Altura dos botões */
     border-radius: 50px;
-    padding: 0.5rem;
     border: none;
     background-color: #8b8b8b;
     cursor: pointer;
-  }
-  .buteviar:hover{
-    transition: 0.5s;
+}
+.buteviar:hover, .add-button:hover {
     background-color: rgb(91, 170, 91);
+}
+/* Estilos do botão "+" */
+.add-button {
+    margin-left: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    border: none;
+    background-color: #8b8b8b;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.add-button:hover {
+    background-color: rgb(91, 170, 91);
+}
+
+/* Estilos para o menu suspenso */
+.dropdown-menu {
+    display: none; /* Menu suspenso oculto inicialmente */
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top: 50px;
+    right: 50px;
+}
+
+.dropdown-menu .location-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-menu .location-button:hover {
+    background-color: #f5f5f5;
+}
+/* Estilos para o menu suspenso */
+.dropdown-menu {
+    display: none; /* Menu suspenso oculto inicialmente */
+    position: absolute; /* Posição absoluta em relação ao contêiner pai */
+    background-color: white; /* Cor de fundo do menu */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 0.5rem; /* Espaçamento interno do menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    top: 84%; /* Ajustar a posição para que fique acima do botão "+" */
+    right: 0; /* Alinhar à direita do botão "+" */
+    z-index: 10; /* Garante que o menu fique acima de outros elementos */
+}
+
+
+
+.add-button {
+    margin-left: 10px; /* Espaçamento entre o campo de texto e o botão de adicionar */
+}
+.chat__messages {
+    padding: 10px;
+    flex-grow: 1; /* Para ocupar o espaço restante */
+    overflow-y: auto; /* Habilitar rolagem se necessário */
+}
+
+.message {
+    background-color: #d1ffd1; /* Cor de fundo das mensagens */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    margin: 5px 0; /* Margem entre as mensagens */
+    text-align: left; /* Alinhamento do texto */
+    max-width: 70%; /* Largura máxima da mensagem */
+    align-self: flex-end; /* Alinhar à direita */
+}
+
+    
+
+.user-message {
+    align-self: flex-end; /* Alinhar à direita para mensagens do usuário */
+}
+
+.received-message {
+    align-self: flex-start; /* Alinhar à esquerda para mensagens recebidas */
+}
+.camera-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.camera-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute; /* Ou fixed, dependendo de onde você quer mostrar */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

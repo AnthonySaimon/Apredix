@@ -86,7 +86,8 @@
         </div>
     </nav>
 
-    <div class="chat-elemento">
+    <div class="chat-elemento" >
+        
 
         <div class="aba-chat">
             <div class="conversas">
@@ -106,18 +107,158 @@
         </div>
 
         <div class="chat">
-            <form class="caixachat" action="">
-                <input placeholder="Digiti aqui ..." class="input" name="text" type="">
-                <button class="buteviar"> <img src="../imagem/bxs-send.png" alt=""> </button>
+            <section class="chat__messages"></section> <!-- Onde as mensagens serão exibidas -->
+        
+            <form class="caixachat" id="chatForm">
+                <input placeholder="Digite aqui ..." class="input" name="text" type="text" id="messageInput">
+                
+                <!-- Botão de "+" ao lado do botão de enviar -->
+                <button type="button" class="add-button" id="addButton">+</button>
+        
+                <!-- Botão de enviar, agora tem o tipo 'submit' -->
+                <button type="submit" class="buteviar">
+                    <img src="../imagem/bxs-send.png" alt="">
+                </button>
+        
+                <!-- Menu suspenso que será mostrado quando clicar no botão "+" -->
+                <div class="dropdown-menu" id="dropdownMenu" style="display: none;">
+                    <button type="button" class="location-button" id="locationButton">
+                        📍 Enviar Localização
+                    </button>
+                    <button class="camera-button">Enviar Foto</button> <!-- Novo botão da câmera -->
+                </div>
             </form>
+            <div class="camera-container" style="display: none;">
+                <video id="video" width="300" height="300" autoplay></video>
+                <button id="capture-button">Capturar Foto</button>
+                <canvas id="canvas" style="display: none;"></canvas>
+            </div>
+            
         </div>
+        
+        
+
+    <script>
+        
+        const chatForm = document.getElementById('chatForm');
+        const messageInput = document.getElementById('messageInput');
+        const chatMessages = document.querySelector('.chat__messages');
+        const addButton = document.getElementById('addButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        const locationButton = document.getElementById('locationButton');
+
+        // Enviar mensagem
+
+   // Enviar mensagem
+chatForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar o comportamento padrão do formulário
+
+    const messageText = messageInput.value.trim();
+    if (messageText) {
+        // Adicionar mensagem ao chat
+        const messageElement = document.createElement('div');
+        messageElement.textContent = messageText;
+        messageElement.classList.add('message'); // Adicionar classe para estilizar a mensagem
+        chatMessages.appendChild(messageElement);
+        messageInput.value = ''; // Limpar o campo de entrada
+        chatMessages.scrollTop = chatMessages.scrollHeight; // Rolagem para a mensagem mais recente
+    }
+});
+
+
+
+        // Mostrar/Ocultar menu suspenso
+        addButton.addEventListener('click', function() {
+            dropdownMenu.style.display = dropdownMenu.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Enviar localização
+        locationButton.addEventListener('click', function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    // Adicionar a localização ao chat
+                    const locationMessage = `Localização: https://www.google.com/maps?q=${lat},${lon}`;
+                    const messageElement = document.createElement('div');
+                    messageElement.textContent = locationMessage;
+                    chatMessages.appendChild(messageElement);
+                    chatMessages.scrollTop = chatMessages.scrollHeight; // Rolagem para a mensagem mais recente
+                    dropdownMenu.style.display = 'none'; // Fechar o menu após o envio
+                });
+            } else {
+                alert('Geolocalização não é suportada neste navegador.');
+            }
+        });
+        document.querySelector('.camera-button').addEventListener('click', async () => {
+    // Verifica se o navegador suporta o acesso à câmera
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        try {
+            // Pede permissão para acessar a câmera
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            const video = document.getElementById('video');
+            video.srcObject = stream;
+
+            // Mostra o contêiner da câmera
+            document.querySelector('.camera-container').style.display = 'block';
+
+            // Captura a foto ao clicar no botão
+            document.getElementById('capture-button').onclick = () => {
+                const canvas = document.getElementById('canvas');
+                const context = canvas.getContext('2d');
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                context.drawImage(video, 0, 0);
+
+                // Para o stream da câmera
+                stream.getTracks().forEach(track => track.stop());
+
+                // Converte a imagem para URL de dados e envia
+                const imageDataUrl = canvas.toDataURL('image/png');
+                enviarImagemParaChat(imageDataUrl);
+
+                // Oculta o contêiner da câmera
+                document.querySelector('.camera-container').style.display = 'none';
+            };
+        } catch (error) {
+            console.error("Erro ao acessar a câmera: ", error);
+        }
+    } else {
+        alert("A câmera não é suportada neste navegador.");
+    }
+});
+
+// Função para enviar a imagem para o chat
+function enviarImagemParaChat(imageDataUrl) {
+    // Crie uma nova mensagem com a imagem
+    const messageContainer = document.createElement('div');
+    messageContainer.className = 'message';
+    const img = document.createElement('img');
+    img.src = imageDataUrl;
+    img.style.maxWidth = '100%'; // Limita o tamanho da imagem
+    messageContainer.appendChild(img);
+
+    // Adiciona a mensagem ao chat
+    document.querySelector('.chat__messages').appendChild(messageContainer);
+}
+
+    </script>
+
+</body>
+</html>
+
+        </div>
+    
 
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src='../home/main.js'></script>
 
 
 </body>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src='../home/main.js'></script>
+
+
+
 
 </html>

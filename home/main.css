@@ -1,12 +1,12 @@
 * {
-    margin: 0;
+    margin: -0.5px;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Courier Gothic', sans-serif;
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: #f2f5f7;
     height: 100vh;
 }
 /* logo */
@@ -16,7 +16,7 @@ body {
     top: 1px;
     width: 100%;
     height: 80px;
-    background-color: white;
+    background-color: #1b7bbba4;
     display: flex;
     justify-content: space-between;
     align-items: center;

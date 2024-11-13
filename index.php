@@ -6,7 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='Login.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./CSS/Login.css'>
     <script src='main.js'></script>
 </head>
 
@@ -14,7 +14,7 @@
     <div class="container">
         <div class="panel">
             <h2>Login</h2>
-            <form method="POST" action="login.php">
+            <form method="POST" action="./PHP/login.php">
                 <div class="bodas">
                     <label for="username">Email:</label>
                     <input type="text" id="username" name="username" required>

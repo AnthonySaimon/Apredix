@@ -6,8 +6,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Aprendix ADM</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='Main.css'>
-    <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
+    <link rel='stylesheet' type='text/css' media='screen' href='../../CSS/ADM/main.css'>
+    <link rel="shortcut icon" href="../../imagem/Logo-aprendix.png" type="image/ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,7 +68,7 @@
                 <div class="menuextra">
 
                     <li class="menuextrali">
-                        <a href="../sair.php">
+                        <a href="../../PHP/sair.php">
                             <ion-icon name="log-out-outline"></ion-icon> Deslogar
                         </a>
                     </li>
@@ -113,6 +113,6 @@
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src='../home/main.js'></script>
+<script src='../../Javascript/home/main.js'></script>
 
 </html>

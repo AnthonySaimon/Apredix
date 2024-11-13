@@ -1,1 +1,2 @@
-ErrorDocument 404 http://localhost/Apredix-main/view/404/
+ErrorDocument 404 http://localhost/Apredix-main/view/404/;
+ErrorDocument 404 http://localhost/Http/Apredix_site/view/404/

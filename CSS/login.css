@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(./imagem/Apredix_BV.png);
+    background-image: url(../imagem/Apredix_BV.png);
 }
 h2{
     font-size: 3rem;

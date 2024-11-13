@@ -6,7 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Aprendix</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='Main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../../CSS/home/Main.css'>
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
 </head>
 
@@ -91,19 +91,19 @@
             <input type="radio" name="radio-btn" id="radio4">
 
             <div class="slide first">
-                <img src="../imagem/slider_1.png" alt="natureza">
+                <img src="../../imagem/slider_1.png" alt="natureza">
             </div>
 
             <div class="slide">
-                <img src="../imagem/slider_2.png" alt="natureza">
+                <img src="../../imagem/slider_2.png" alt="natureza">
             </div>
 
             <div class="slide">
-                <img src="../imagem/Aprendix_sem_foto.png" alt="natureza">
+                <img src="../../imagem/Aprendix_sem_foto.png" alt="natureza">
             </div>
 
             <div class="slide">
-                <img src="../imagem/Aprendix_sem_foto.png" alt="natureza">
+                <img src="../../imagem/Aprendix_sem_foto.png" alt="natureza">
             </div>
 
             <div class="navigation-auto">
@@ -132,37 +132,37 @@
         <div class="cusos">
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="../modelo_cusos/index.php">
-                <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
+                <a href="../modelo_cusos/index.php/hhh">
+                <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
                 <a href="../modelo_cusos/index.html">
-                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
                 <a href="../modelo_cusos/index.html">
-                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
                 <a href="../modelo_cusos/index.html">
-                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
                 <a href="../modelo_cusos/index.html">
-                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
@@ -175,37 +175,37 @@
         <div class="cusos">
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
                 <a href="../modelo_cusos/index.html">
-                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
                 <a href="../modelo_cusos/index.html">
-                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
                 <a href="../modelo_cusos/index.html">
-                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
                 <a href="../modelo_cusos/index.html">
-                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
                 <a href="../modelo_cusos/index.html">
-                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 

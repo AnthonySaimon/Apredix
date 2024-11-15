@@ -25,7 +25,7 @@ class protocoloUser extends Conexao
     public function list_client()
     {
         $pdo = parent::get_instance();
-        $sql = "SELECT * FROM comentarios ORDER BY id asc";
+        $sql = "SELECT * FROM comentarios ";
         $statement = $pdo->query($sql);
         return $statement->fetchAll();
     }

@@ -1,5 +1,5 @@
 <?php
-include '../ProtocoloUser/protocolouser.php';
+include '../../PHP/ProtocoloUser/protocolouser.php';
 $manager = new protocoloUser();
 ?>
 <!DOCTYPE html>
@@ -10,8 +10,8 @@ $manager = new protocoloUser();
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Aprendix</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='Main.css'>
-    <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
+    <link rel='stylesheet' type='text/css' media='screen' href='../../CSS/modelo_cusos/main.css'>
+    <link rel="shortcut icon" href="../../imagem/Logo-aprendix.png" type="image/ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,19 +71,19 @@ $manager = new protocoloUser();
     <nav class="elementoscusos">
         <div class="abacusos">
             <div class="aba1">
-                <img class="abaimg" src="../imagem/Aprendix_sem_foto.png" alt="">
+                <img class="abaimg" src="../../imagem/Aprendix_sem_foto.png" alt="">
 
                 <div class="subfotos">
                     <div class="elementofotos">
-                        <img src="../imagem/Aprendix_sem_foto.png" alt="">
+                        <img src="../../imagem/Aprendix_sem_foto.png" alt="">
                     </div>
 
                     <div class="elementofotos">
-                        <img src="../imagem/Aprendix_sem_foto.png" alt="">
+                        <img src="../../imagem/Aprendix_sem_foto.png" alt="">
                     </div>
 
                     <div class="elementofotos">
-                        <img src="../imagem/Aprendix_sem_foto.png" alt="">
+                        <img src="../../imagem/Aprendix_sem_foto.png" alt="">
                     </div>
                 </div>
             </div>
@@ -136,11 +136,11 @@ $manager = new protocoloUser();
             </div>
 
             <div class="input-container">
-                <form action="../ProtocoloUser/adddcommit.php"  method="POST"  class="input-container" id="comentario-form">
+                <form action="../../PHP/ProtocoloUser/adddcommit.php"  method="POST"  class="input-container" id="comentario-form">
                     <input type="text" name="comentario" id="input-comentario" required="">
                     <label for="input-comentario" class="label">Escreva Aqui</label>
                     <div class="underline"></div>
-                    <button class="buteviar" type="submit"> <img src="../imagem/bxs-send.png" alt=""> </button>
+                    <button class="buteviar" type="submit"> <img src="../../imagem/bxs-send.png" alt=""> </button>
                 </form>
             </div>
         </div>

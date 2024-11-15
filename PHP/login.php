@@ -32,24 +32,24 @@ if ($result->num_rows == 1) {
 
             $_SESSION['usuario'] = $resutado['nome'];
             $_SESSION['permissao'] = $resutado['permissao'];
-            header("Location: ../HTML/ADM/");
+            header("Location: ../view/ADM/");
 
         } elseif ($row['permissao'] === "Use Premium") {
 
             $_SESSION['usuario'] = $resutado['nome'];
             $_SESSION['permissao'] = $resutado['permissao'];
-            header("Location: ../HTML/home/");
+            header("Location: ../view/home/");
             exit();
         }
         elseif ($row['permissao'] ===  "Use Free") {
 
             $_SESSION['usuario'] = $resutado['nome'];
             $_SESSION['permissao'] = $resutado['permissao'];
-            header("Location: ../HTML/home/");
+            header("Location: ../view/home/");
             exit();
         }
         elseif ($row['permissao'] === "Banido") {
-            header("Location: ../HTML/BAM/");
+            header("Location: ../view/BAM/");
         }
     } else {
         header("Location: ../index.php?erro=1");

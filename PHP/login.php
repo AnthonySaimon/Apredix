@@ -38,14 +38,14 @@ if ($result->num_rows == 1) {
 
             $_SESSION['usuario'] = $resutado['nome'];
             $_SESSION['permissao'] = $resutado['permissao'];
-            header("Location: ../view/home/");
+            header("Location: ../view/home");
             exit();
         }
         elseif ($row['permissao'] ===  "Use Free") {
 
             $_SESSION['usuario'] = $resutado['nome'];
             $_SESSION['permissao'] = $resutado['permissao'];
-            header("Location: ../view/home/");
+            header("Location: ../view/home");
             exit();
         }
         elseif ($row['permissao'] === "Banido") {

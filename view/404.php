@@ -6,8 +6,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>404</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../../CSS/404/Main.css'>
-    <link rel="shortcut icon" href="../../imagem/Logo-aprendix.png" type="image/ico" />
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/e404.css'>
+    <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,21 +47,21 @@
                     </a>
                 </li>
                 <li>
-                    <a href="../configuracao/index.html">
+                    <a href="./config.html">
                         <ion-icon name="settings-outline"></ion-icon>
                         Comfiguração
                     </a>
                 </li>
 
                 <li>
-                    <a href="../Chat/index.html">
+                    <a href="./Chat.html">
                         <ion-icon name="chatbox-ellipses-outline"></ion-icon>
                         Chat
                     </a>
                 </li>
 
                 <li>
-                    <a href="../modelo_cusos/carrinho.html">
+                    <a href="./carrinho.html">
                         <ion-icon name="bag-outline"></ion-icon> Carrinho
                     </a>
                 </li>
@@ -69,13 +69,13 @@
                 <div class="menuextra">
 
                     <li class="menuextrali">
-                        <a href="../../PHP/sair.php">
+                        <a href="../PHP/sair.php">
                             <ion-icon name="log-out-outline"></ion-icon> Deslogar
                         </a>
                     </li>
 
                     <li class="menuextrali2">
-                        <a href="../home/index.php">
+                        <a href="./home.php">
                             <ion-icon name="home-outline"></ion-icon> Home
                         </a>
                     </li>
@@ -95,7 +95,7 @@
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src='../../Javascript/home/main.js'></script>
+<script src='../Javascript/home/main.js'></script>
 <script type='text/javascript'>document.addEventListener('DOMContentLoaded', function () {window.setTimeout(document.querySelector('svg').classList.add('animated'),1000);})</script>
 
 </html>

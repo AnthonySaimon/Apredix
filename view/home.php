@@ -6,8 +6,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Aprendix</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../../CSS/home/main.css'>
-    <link rel="shortcut icon" href="../../imagem/Logo-aprendix.png" type="image/ico" />
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/Home.css'>
+    <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
 </head>
 
 <body>
@@ -41,14 +41,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="../configuracao/index.html">
+                    <a href="./config.html">
                         <ion-icon name="settings-outline"></ion-icon>
                         Comfiguração
                     </a>
                 </li>
 
                 <li>
-                    <a href="../Chat/index.html">
+                    <a href="./Chat.html">
                         <ion-icon name="chatbox-ellipses-outline"></ion-icon>
                         Chat
                     </a>
@@ -91,19 +91,19 @@
             <input type="radio" name="radio-btn" id="radio4">
 
             <div class="slide first">
-                <img src="../../imagem/slider_1.png" alt="natureza">
+                <img src="../imagem/slider_1.png" alt="natureza">
             </div>
 
             <div class="slide">
-                <img src="../../imagem/slider_2.png" alt="natureza">
+                <img src="../imagem/slider_2.png" alt="natureza">
             </div>
 
             <div class="slide">
-                <img src="../../imagem/Aprendix_sem_foto.png" alt="natureza">
+                <img src="../imagem/Aprendix_sem_foto.png" alt="natureza">
             </div>
 
             <div class="slide">
-                <img src="../../imagem/Aprendix_sem_foto.png" alt="natureza">
+                <img src="../imagem/Aprendix_sem_foto.png" alt="natureza">
             </div>
 
             <div class="navigation-auto">
@@ -132,37 +132,37 @@
         <div class="cusos">
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="../modelo_cusos/index.php">
-                <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <a href="./cusos.php">
+                <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="../modelo_cusos/index.php">
-                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <a href="./cusos.php">
+                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="../modelo_cusos/index.php">
-                    <img src="../..//imagem/Aprendix_sem_cusos.png" alt="cusos">
+                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <a href="./cusos.php">
+                    <img src="..//imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="../modelo_cusos/index.php">
-                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <a href="./cusos.php">
+                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="../modelo_cusos/index.php">
-                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <a href="./cusos.php">
+                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
@@ -175,37 +175,37 @@
         <div class="cusos">
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="../modelo_cusos/index.php">
-                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <a href="./cusos.php">
+                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="../modelo_cusos/index.php">
-                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <a href="./cusos.php">
+                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="../modelo_cusos/index.php">
-                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <a href="./cusos.php">
+                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="../modelo_cusos/index.php">
-                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <a href="./cusos.php">
+                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
             <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="../modelo_cusos/index.php">
-                    <img src="../../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
+                <a href="./cusos.php">
+                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 
@@ -217,6 +217,6 @@
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script defer src='../../Javascript/home/main.js'></script>
+<script defer src='../Javascript/home/main.js'></script>
 
 </html>

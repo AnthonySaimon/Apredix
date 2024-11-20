@@ -1,5 +1,5 @@
 <?php
-include '../../PHP/ProtocoloUser/protocolouser.php';
+include '../PHP/ProtocoloUser/protocolouser.php';
 $manager = new protocoloUser();
 ?>
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ $manager = new protocoloUser();
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Aprendix</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../../CSS/modelo_cusos/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/Modelo_cusos.css'>
     <link rel="shortcut icon" href="../../imagem/Logo-aprendix.png" type="image/ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,50 +23,73 @@ $manager = new protocoloUser();
 
 <body>
 
-    <nav class="menu-nav">
+<nav class="menu-nav">
 
-        <div class="menutoggle" id="menutoggle"></div>
+<div class="menutoggle" id="menutoggle">
+    <label for="check" class="menuButton">
+        <input id="check" type="checkbox">
+        <span class="top"></span>
+        <span class="mid"></span>
+        <span class="bot"></span>
+    </label>
+</div>
 
-
-        <div class="perfil">
-            <h3>Usuario <br><samp>aaaaa</samp></h3>
-            <div class="imgcx">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s"
-                    alt="...">
-            </div>
+<a href="../User/Index.html">
+    <div class="perfil">
+        <h3>Usuario <br><samp>aaaaa</samp></h3>
+        <div class="imgcx">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="...">
         </div>
-        <div class="menu">
-            <ul>
-                <li>
-                    <a href="">
-                        <ion-icon name="file-tray-outline"></ion-icon>
-                        Biblioteca
-                    </a>
-                </li>
-                <li>
-                    <a href="../configuracao/index.html">
-                        <ion-icon name="settings-outline"></ion-icon>
-                        Comfiguração
-                    </a>
-                </li>
+    </div>
+</a>
 
-                <li>
-                    <a href="../Chat/index.html">
-                        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
-                        Chat
-                    </a>
-                </li>
+<div class="menu">
+    <ul>
+        <li>
+            <a href="">
+                <ion-icon name="file-tray-outline"></ion-icon>
+                Biblioteca
+            </a>
+        </li>
+        <li>
+            <a href="./config.html">
+                <ion-icon name="settings-outline"></ion-icon>
+                Comfiguração
+            </a>
+        </li>
 
-                <li>
-                    <a href="../index.php">
-                        <ion-icon name="log-out-outline"></ion-icon>
-                        Deslogar
-                    </a>
-                </li>
+        <li>
+            <a href="./Chat.html">
+                <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                Chat
+            </a>
+        </li>
 
-            </ul>
+        <li>
+            <a href="./carrinho.html">
+                <ion-icon name="bag-outline"></ion-icon> Carrinho
+            </a>
+        </li>
+
+        <div class="menuextra">
+
+            <li class="menuextrali">
+                <a href="../PHP/sair.php">
+                    <ion-icon name="log-out-outline"></ion-icon> Deslogar
+                </a>
+            </li>
+
+            <li class="menuextrali2">
+                <a href="./home.php">
+                    <ion-icon name="home-outline"></ion-icon> Home
+                </a>
+            </li>
+
         </div>
-    </nav>
+
+    </ul>
+</div>
+</nav>
 
     <nav class="elementoscusos">
         <div class="abacusos">
@@ -112,7 +135,7 @@ $manager = new protocoloUser();
                             <li>Compra</li>
                         </a>
                         <div class="carrinho">
-                            <a href="carrinho.html" target="_blank" rel="noopener noreferrer" class="carrinho">
+                            <a href="carrinho.html" target="_blank" rel="noopener noreferrer" class="compra">
                                 <li>Carrinho</li>
                             </a>
 
@@ -136,7 +159,7 @@ $manager = new protocoloUser();
             </div>
 
             <div class="input-container">
-                <form action="../../PHP/ProtocoloUser/adddcommit.php"  method="POST"  class="input-container" id="comentario-form">
+                <form action="../../PHP/ProtocoloUser/adddcommit.php" method="POST" class="input-container" id="comentario-form">
                     <input type="text" name="comentario" id="input-comentario" required="">
                     <label for="input-comentario" class="label">Escreva Aqui</label>
                     <div class="underline"></div>
@@ -147,15 +170,15 @@ $manager = new protocoloUser();
 
 
         <?php foreach ($manager->list_client() as $data) : ?>
-        <div class="fscoment">
-            <div class="user">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="User">
-                <h2>Nome de usuario</h2>
+            <div class="fscoment">
+                <div class="user">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="User">
+                    <h2>Nome de usuario</h2>
+                </div>
+                <div class="comentario">
+                    <?= $data['comentario'] ?>
+                </div>
             </div>
-            <div class="comentario">
-            <?= $data['comentario'] ?>
-            </div>
-        </div>
         <?php endforeach; ?>
 
     </div>
@@ -194,6 +217,6 @@ $manager = new protocoloUser();
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src='../home/main.js'></script>
+<script src='../Javascript/home/main.js'></script>
 
 </html>

@@ -6,23 +6,23 @@
 }
 
 body {
-    background-color: #000000;
+    background-color: #f2f5f7;
     height: 100vh;
-    box-sizing: border-box;
-    font-family: 'Courier Gothic', sans-serif;
 }
+/* logo */
 
 .menu-nav {
     position: relative;
     top: 1px;
     width: 100%;
     height: 80px;
-    background-color: rgb(37, 37, 37);
+    background-color: #1b7bbba4;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     box-shadow: 0 50px 50px rgba(0, 0, 0 .1);
+    margin-top: -1px;
 }
 
 
@@ -70,7 +70,7 @@ body {
     left: -10rem;
     width: 15rem;
     min-height: 100px;
-    background-color: #000000;
+    background-color: white;
     box-shadow: 0 50px 50px rgba(0, 0, 0 .1);
     user-select: none;
     opacity: 0;
@@ -91,7 +91,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #000000;
+    background-color: #fff;
     list-style: none;
 }
 
@@ -174,6 +174,8 @@ body {
     background: #e8e8e8;
     border: 1px solid #e8e8e8;
     transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #ffffff;
 }
 
 .menuButton:hover {
@@ -215,17 +217,163 @@ input[type]:checked~span.mid {
     transform: translateX(-20px);
     opacity: 0;
 }
-.erro{
+
+/* Carrosel de imagem */
+.slider {
+    margin: 3rem auto;
+    width: 80rem;
+    height: 40rem;
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 40rem;
     display: flex;
-    width: 100%;
-    height: 90vh;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    width: 80rem;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 80rem;
+    margin-top: -38rem;
+    display: flex;
     justify-content: center;
-    align-items: center;
 }
-.erro .imgoi{
-    width: 50rem;
-    height: 49rem;
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.20s;
+    margin-top: 36rem;
 }
-.imgoi{
-    background-image: url(../../imagem/404error.gif);
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: #fff;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -25%;
+}
+
+#radio3:checked~.first {
+    margin-left: -50%;
+}
+
+#radio4:checked~.first {
+    margin-left: -75%;
+}
+
+.navigation-auto div {
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 80rem;
+    margin-top: 38rem;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background-color: #fff;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background-color: #fff;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background-color: #fff;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background-color: #fff;
+}
+
+.abacusos {
+    padding: 2%;
+    width: 100%;
+    height: 22rem;
+}
+
+.abacusos .nome h2 {
+    background-color: #999;
+    width: 5.5%;
+    padding: 0.5%;
+    border-radius: 15px;
+}
+
+.cusos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.abacusos .cusos {
+    width: 100%;
+    height: 80%;
+    padding: 1%;
+}
+.elemento{
+    display: flex;
+}
+.abacusos .cusos .elemento {
+    width: 20rem;
+    height: 12rem;
+    border-radius: 15px;
+    background-color: rgb(102, 102, 102);
+    overflow: hidden;
+}
+
+.abacusos .cusos .elemento img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fotoaba{
+    position: absolute;
+    width: 5rem;
+    height: 3rem;
+    background-color: #666;
+    border-radius: 15px 0 15px 0;
+    display: flex;
+    justify-content: center;
+}
+.abacusos .cusos .elemento .fotoaba .ing{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
 }

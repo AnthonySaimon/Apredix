@@ -27,7 +27,7 @@
 
                 <br>
                 <button class="logar1" type="submit">Logar</button>
-                <a class="logar2" href="./cadastrar/cadastro.html">Cadastrar</a>
+                <a class="logar2" href="./view/cadastro.html">Cadastrar</a>
             </form>
             <div class="extra">
                 <?php

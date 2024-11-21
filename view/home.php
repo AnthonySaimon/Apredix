@@ -1,3 +1,18 @@
+<?php
+session_start();
+//print_r($_SESSION);
+if ((!isset($_SESSION['id']) == true) and (!isset($_SESSION['permissao']) == true)) 
+{
+    unset($_SESSION['id']);
+    unset($_SESSION['usuario']);
+    unset($_SESSION['permissao']);
+    header("Location: ../index.php");
+}
+$usuario = $_SESSION['usuario'];
+$permisao = $_SESSION['permissao'];
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +21,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Aprendix</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/Home.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/hOme.css'>
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
 </head>
 
@@ -23,9 +38,13 @@
             </label>
         </div>
 
-        <a href="../User/Index.html">
+        <a href="./usuario">
             <div class="perfil">
-                <h3>Usuario <br><samp>aaaaa</samp></h3>
+
+            <?php
+                echo "<h3> $usuario <br><samp>$permisao</samp></h3>"
+                ?> 
+
                 <div class="imgcx">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="...">
                 </div>
@@ -55,7 +74,7 @@
                 </li>
 
                 <li>
-                    <a href="../modelo_cusos/carrinho.html">
+                    <a href="./carrinho.html">
                         <ion-icon name="bag-outline"></ion-icon> Carrinho
                     </a>
                 </li>
@@ -63,7 +82,7 @@
                 <div class="menuextra">
 
                     <li class="menuextrali">
-                        <a href="../../PHP/sair.php">
+                        <a href="../PHP/sair.php">
                             <ion-icon name="log-out-outline"></ion-icon> Deslogar
                         </a>
                     </li>
@@ -134,7 +153,7 @@
             <div class="elemento">
                 <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
                 <a href="./cusos.php">
-                <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
+                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
                 </a>
             </div>
 

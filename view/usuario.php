@@ -1,5 +1,21 @@
+<?php
+session_start();
+//print_r($_SESSION);
+if ((!isset($_SESSION['id']) == true) and (!isset($_SESSION['permissao']) == true)) {
+    unset($_SESSION['id']);
+    unset($_SESSION['usuario']);
+    unset($_SESSION['permissao']);
+    header("Location: ../index.php");
+}
+$tudo = $_SESSION['tudo'];
+//-----------------------------------------
+$nome =$tudo['nome'];
+$sobrenome = $tudo['sobrenome'];
+$permit = $tudo['permissao'];
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +23,7 @@
     <link rel="stylesheet" href="../CSS/User/styles.css">
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
 </head>
+
 <body>
     <div class="perfil-container">
         <div class="header">
@@ -18,7 +35,11 @@
                 <button id="changePhotoBtn">Alterar Foto</button>
                 <input type="file" id="uploadPhotoInput" style="display: none;">
             </div>
-            <h2 id="username">Nome do Usuário</h2>
+
+            <?php
+            echo "<h2 id='username'>$nome $sobrenome</h2>";
+            ?>
+
             <div class="change-username">
                 <label for="newUsername">Alterar Nome de Usuário:</label>
                 <input type="text" id="newUsername" placeholder="Digite um novo nome">
@@ -33,9 +54,11 @@
             <div class="category">
                 <label for="category">Categoria:</label>
                 <div id="userCategory">
-                    <p>Premium</p>
-                    <p>Free</p>
-                    <p>Adm</p>
+
+                <?php
+                    echo "<p>$permit</p>" ; 
+                ?>
+
                 </div>
             </div>
         </div>
@@ -43,4 +66,5 @@
 
     <script src="../Javascript/User/scripts.js"></script>
 </body>
+
 </html>

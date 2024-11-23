@@ -1,4 +1,4 @@
-,<?php
+<?php
     session_start();
     // Conexão com o banco de dados
     $servername = "localhost";
@@ -34,7 +34,8 @@
                 $_SESSION['usuario'] = $row['nome'];
                 $_SESSION['permissao'] = $row['permissao'];
                 $_SESSION['tudo'] = $row;
-                header("Location: ../view/ADM/");
+                header("Location: ../view/ADM_home.php");
+           
 
             } elseif ($row['permissao'] === "Use Premium") {
 

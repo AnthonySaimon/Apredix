@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../imagem/Apredix_BV.png);
+}
+h2{
+    font-size: 3rem;
+    width: 10rem;
+    background-color: dimgray;
+    color: whitesmoke;
+    padding: 5px;
+    border-radius: 6px;
+
+}
+.panel {
+    align-items: center;
+    display: flex;
+    height: 40rem;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 48%);
+    text-align: center;
+    margin-left: 50%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.panel h2 {
+    margin-bottom: 3rem;
+}
+
+.panel form {
+    margin-bottom: 20px;
+}
+
+.panel .bodas{
+    background-color: #d4e3ff;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.panel label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.panel input[type="text"]{
+
+ justify-items: center;
+ width: 40vh;
+ height: 30px;
+ margin-bottom: 10px;
+ border: 1px solid #ccc;
+ border-radius: 3px;
+ padding: 5px;
+
+}
+.panel input[type="password"] {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    justify-items: center;
+    width: 40vh;
+    height: 30px;
+    color: black;
+}
+.logar1{
+    padding: 4px;
+   font-size: 0.5cm;
+   border-radius: 6px;
+}
+.logar2{
+    padding: 4px;
+   font-size: 0.5cm;
+   border-radius: 6px;
+   width: 5rem;
+   padding: 10px;
+   background-color: dimgray;
+   color: #ffffff;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+}
+
+.panel button {
+    width: 5rem;
+    padding: 10px;
+    background-color: dimgray;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.panel button:hover {
+    background-color: #0056b3;
+}
+
+.extra {
+    margin-bottom: 20px;
+}
+
+.extra p {
+    margin: 0;
+}
+
+.extra a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.extra a:hover {
+    text-decoration: underline;
+}
+
+.exit-btn {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    font-size: 0.5cm;
+    border-radius: 8px;
+}
+
+.exit-btn:hover {
+    background-color: #c82333;
+}
+.incorreto {
+    border-radius: 10px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    background-color: #c82333;
+    color: white;
+    height: 2rem;
+}

@@ -1,8 +1,7 @@
 <?php
 session_start();
 //print_r($_SESSION);
-if ((!isset($_SESSION['id']) == true) and (!isset($_SESSION['permissao']) == true)) 
-{
+if ((!isset($_SESSION['id']) == true) and (!isset($_SESSION['permissao']) == true)) {
     unset($_SESSION['id']);
     unset($_SESSION['usuario']);
     unset($_SESSION['permissao']);
@@ -21,7 +20,7 @@ $permisao = $_SESSION['permissao'];
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Aprendix</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/hOme.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/HOme.css'>
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
 </head>
 
@@ -41,9 +40,9 @@ $permisao = $_SESSION['permissao'];
         <a href="./usuario">
             <div class="perfil">
 
-            <?php
+                <?php
                 echo "<h3> $usuario <br><samp>$permisao</samp></h3>"
-                ?> 
+                ?>
 
                 <div class="imgcx">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="...">
@@ -78,6 +77,11 @@ $permisao = $_SESSION['permissao'];
                         <ion-icon name="bag-outline"></ion-icon> Carrinho
                     </a>
                 </li>
+                <?php
+                if ($permisao === 'ADM') {
+                    echo " <li> <a href='./ADM_home'> <ion-icon name='people-circle-outline'></ion-icon> Home ADM </a> </li>";
+                }
+                ?>
 
                 <div class="menuextra">
 

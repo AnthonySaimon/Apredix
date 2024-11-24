@@ -1,3 +1,23 @@
+<?php
+session_start();
+//print_r($_SESSION);
+if ((!isset($_SESSION['id']) == true) and (!isset($_SESSION['permissao']) == true)) {
+    unset($_SESSION['id']);
+    unset($_SESSION['usuario']);
+    unset($_SESSION['permissao']);
+    header("Location: ../index.php");
+}
+$usuario = $_SESSION['usuario'];
+$permisao = $_SESSION['permissao'];
+
+// Redirecionar para a página de login
+if ($_SESSION['permissao'] === "ADM") {
+} else {
+    header("Location: ../PHP/sair");
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +26,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Aprendix ADM</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='Main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/home_adm.css'>
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,9 +38,10 @@
 </head>
 
 <body>
+
     <nav class="menu-nav">
-        
-    <div class="menutoggle" id="menutoggle">
+
+        <div class="menutoggle" id="menutoggle">
             <label for="check" class="menuButton">
                 <input id="check" type="checkbox">
                 <span class="top"></span>
@@ -30,7 +51,11 @@
         </div>
 
         <div class="perfil">
-            <h3>Usuario <br><samp>aaaaa</samp></h3>
+
+            <?php
+            echo "<h3> $usuario <br><samp>$permisao</samp></h3>"
+            ?>
+
             <div class="imgcx">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s"
                     alt="...">
@@ -39,7 +64,7 @@
         <div class="menu">
             <ul>
                 <li>
-                    <a href="./Gerenciar_user/index.php">
+                    <a href="./ADM_gerenciar_User">
                         <ion-icon name="body-outline"></ion-icon>
                         Gerenciar Usuario
                     </a>
@@ -53,22 +78,23 @@
                 </li>
 
                 <li>
-                    <a href="../configuracao/index.html">
+                    <a href="./config">
                         <ion-icon name="settings-outline"></ion-icon>
                         Comfiguração
                     </a>
                 </li>
 
                 <li>
-                    <a href="../sair.php">
-                        ---
+                    <a href="">
+                        <ion-icon name="code-working-outline"></ion-icon> Depuração
                     </a>
                 </li>
+
 
                 <div class="menuextra">
 
                     <li class="menuextrali">
-                        <a href="../sair.php">
+                        <a href="../php/sair.php">
                             <ion-icon name="log-out-outline"></ion-icon> Deslogar
                         </a>
                     </li>
@@ -113,6 +139,6 @@
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src='../home/main.js'></script>
+<script src='../Javascript/home/main.js'></script>
 
 </html>

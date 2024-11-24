@@ -1,5 +1,23 @@
 <?php
-include '../protocolo/protocolo.php';
+session_start();
+//print_r($_SESSION);
+if ((!isset($_SESSION['id']) == true) and (!isset($_SESSION['permissao']) == true)) {
+    unset($_SESSION['id']);
+    unset($_SESSION['usuario']);
+    unset($_SESSION['permissao']);
+    header("Location: ../index.php");
+}
+$usuario = $_SESSION['usuario'];
+$permisao = $_SESSION['permissao'];
+
+// Redirecionar para a página de login
+if ($_SESSION['permissao'] === "ADM") {
+} else {
+    header("Location: ../PHP/sair");
+}
+
+
+include '../PHP/ADM/protocolo.php';
 $id = $_POST['id'];
 $manager = new protocolo();
 ?>
@@ -12,7 +30,7 @@ $manager = new protocolo();
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Aprendix</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/gerenciar_bam.css'>
     <link rel="shortcut icon" href="../../imagem/Logo-aprendix.png" type="image/ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,8 +46,8 @@ $manager = new protocolo();
 
     <div class="ifro">
         <?php foreach ($manager->list_client_by_id($id) as $data) : ?>
-            <form action="../protocolo/userBAN.php" method="POST">
-                <img class="img_fot" src="../../imagem/ECG_chat.png" alt="">
+            <form action="../PHP/ADM/userBAN.php" method="POST">
+                <img class="img_fot" src="../imagem/ECG_chat.png" alt="">
                 <div class="ifro_div ">
                     <ul class="elemento_ifor">
                         <INPUT TYPE="hidden" name="id" value="<?= htmlspecialchars($data['id']) ?>">
@@ -59,6 +77,6 @@ $manager = new protocolo();
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src='../home/main.js'></script>
+<script src='../Javascript/home/main.js'></script>
 
 </html>

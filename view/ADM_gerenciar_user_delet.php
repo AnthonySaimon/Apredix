@@ -1,5 +1,23 @@
 <?php
-include '../protocolo/protocolo.php';
+session_start();
+//print_r($_SESSION);
+if ((!isset($_SESSION['id']) == true) and (!isset($_SESSION['permissao']) == true)) {
+    unset($_SESSION['id']);
+    unset($_SESSION['usuario']);
+    unset($_SESSION['permissao']);
+    header("Location: ../index.php");
+}
+$usuario = $_SESSION['usuario'];
+$permisao = $_SESSION['permissao'];
+
+// Redirecionar para a página de login
+if ($_SESSION['permissao'] === "ADM") {
+} else {
+    header("Location: ../PHP/sair");
+}
+
+
+include '../PHP/ADM/protocolo.php';
 $id = $_POST['id'];
 
 $manager = new protocolo();
@@ -12,10 +30,10 @@ $manager = new protocolo();
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/gerenciar_user_dlt.css'>
     <script src='main.js'></script>
 
-    <link rel="shortcut icon" href="../../imagem/Logo-aprendix.png" type="image/ico" />
+    <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
 
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +45,7 @@ $manager = new protocolo();
 
     <h1>Tem certeza que deseja excluir esta conta ⛔</h1>
     <br>
-    <form action="../protocolo/userDLT.php" class="aba1" method="POST">
+    <form action="../PHP/ADM/userDLT.php" class="aba1" method="POST">
         <div class="lado1">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="">
         </div>
@@ -52,7 +70,7 @@ $manager = new protocolo();
 
                 <div>
                     <button type="submit" class="input-style2">EXCLUIR</button>
-                    <a class="input-style" href="../Gerenciar_user/index.php">Cancelar</a>
+                    <a class="input-style" href="./ADM_gerenciar_user">Cancelar</a>
                 </div>
             <?php endforeach; ?>
         </div>

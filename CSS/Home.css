@@ -73,7 +73,7 @@ body {
     width: 15rem;
     min-height: 100px;
     background-color: white;
-    box-shadow: 0 50px 50px rgba(0, 0, 0 .1);
+    box-shadow: -1px 0px 20px 3px rgba(0, 0, 0, 1);
     user-select: none;
     opacity: 0;
     visibility: hidden;
@@ -85,8 +85,10 @@ body {
     visibility: visible;
     z-index: 2;
     width: 17rem;
-    height: 22rem;
+    height: 26rem;
     left: 10px;
+    padding: 0.5rem;
+    border-radius: 15px;
 }
 
 .menu-nav .menu ul {
@@ -139,7 +141,6 @@ body {
     margin-top: 1rem;
     border-radius: 15px;
     font-size: 0.8rem;
-    margin-right: 0.5rem;
 }
 
 .menu-nav .menu .menuextra .menuextrali:hover {

@@ -83,13 +83,12 @@ class protocolo extends Conexao
     public function delete_client($id)
     {
 
-       
+
         $pdo = parent::get_instance();
         $sql = "DELETE FROM `usuario` WHERE id = :id";
         $statement = $pdo->prepare($sql);
         $statement->bindValue(':id', $id, PDO::PARAM_INT);
         $statement->execute();
     }
+   
 }
-
-?>

@@ -19,6 +19,7 @@ $permit = $tudo['permissao'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Anthony/MariaEduarda - Aprendix">
     <title>Perfil</title>
     <link rel="stylesheet" href="../CSS/User/styles.css">
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />

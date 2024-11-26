@@ -27,15 +27,18 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
 .elementos h1{
     font-size: 3rem;
     color: #c90000;
 }
+
 .elementos li{
     margin-top: 1.2rem;
     font-size: 1rem;
     color: white;
 }
+
 .img_bam img{
     height: 90%;
     margin-left: 10rem;

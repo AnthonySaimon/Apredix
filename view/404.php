@@ -6,9 +6,9 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>404</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="author" content="Anthony/MariaEduarda - Aprendix">
     <link rel='stylesheet' type='text/css' media='screen' href='../CSS/e404.css'>
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -96,6 +96,10 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src='../Javascript/home/main.js'></script>
-<script type='text/javascript'>document.addEventListener('DOMContentLoaded', function () {window.setTimeout(document.querySelector('svg').classList.add('animated'),1000);})</script>
+<script type='text/javascript'>
+    document.addEventListener('DOMContentLoaded', function() {
+        window.setTimeout(document.querySelector('svg').classList.add('animated'), 1000);
+    })
+</script>
 
 </html>

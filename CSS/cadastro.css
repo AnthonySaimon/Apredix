@@ -12,7 +12,7 @@ body {
     height: 100vh;
 }
 
-.panel {
+.painel {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
@@ -20,7 +20,7 @@ body {
     text-align: center;
 }
 
-.panel h2 {
+.painel h2 {
     background-color: dimgray;
     color: whitesmoke;
     padding: 5px;
@@ -28,18 +28,18 @@ body {
     margin-bottom: 20px;
 }
 
-.panel form {
+.painel form {
     margin-bottom: 20px;
 }
 
-.panel label {
+.painel label {
     display: block;
     margin-bottom: 5px;
 }
 
-.panel input[type="text"],
-.panel input[type="email"],
-.panel input[type="password"] {
+.painel input[type="text"],
+.painel input[type="email"],
+.painel input[type="password"] {
     width: 40vh;
     height: 30px;
     margin-bottom: 10px;
@@ -48,13 +48,7 @@ body {
     padding: 5px;
 }
 
-.logar1 {
-    padding: 4px;
-    font-size: 0.5cm;
-    border-radius: 6px;
-}
-
-.panel button {
+.painel button {
     width: 100%;
     padding: 10px;
     background-color: dimgray;
@@ -64,25 +58,24 @@ body {
     cursor: pointer;
 }
 
-.panel button:hover {
+.painel button:hover {
     background-color: #0056b3;
 }
 
-.extra {
-    margin-bottom: 20px;
+#nome{
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
 }
 
-.extra p {
-    margin: 0;
+#nome input{
+    width: 13em;
 }
 
-.extra a {
-    color: gray;
-    text-decoration: none;
-}
-
-.extra a:hover {
-    text-decoration: underline;
+.logar {
+    padding: 4px;
+    font-size: 0.5cm;
+    border-radius: 6px;
 }
 
 .exit-btn {
@@ -97,13 +90,4 @@ body {
 
 .exit-btn:hover {
     background-color: #c82333;
-}
-
-#nome{
-    display: flex;
-    justify-content: space-around;
-    text-align: left;
-}
-#nome input{
-    width: 13em;
 }

@@ -4,11 +4,11 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>add Chat</title>
+    <title>Add Chat</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="author" content="Anthony/MariaEduarda - Aprendix">
     <link rel='stylesheet' type='text/css' media='screen' href='../CSS/add_chat.css'>
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -30,9 +30,8 @@
             </label>
         </div>
 
-
         <div class="perfil">
-            <h3>Usuario <br><samp>aaaaa</samp></h3>
+            <h3>Usuario <br><samp>aaaaa </samp></h3>
             <div class="imgcx">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s"
                     alt="...">
@@ -86,7 +85,7 @@
         </div>
     </nav>
 
-    <div class="addcusor">
+    <div class="addchat">
 
         <div class="conversas">
             <img src="../imagem/ECG_chat.png" alt="">
@@ -164,8 +163,6 @@
         </div>
 
     </div>
-
-
 
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

@@ -28,6 +28,7 @@ $manager = new protocolo();
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Tela de Cadastro</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="author" content="Anthony/MariaEduarda - Aprendix">
     <link rel='stylesheet' type='text/css' media='screen' href='../CSS/gerenciar_user_add.css'>
 </head>
 

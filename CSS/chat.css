@@ -353,14 +353,17 @@ input[type]:checked~span.mid {
 
 /* Estilos para o menu suspenso */
 .dropdown-menu {
-    display: none; /* Menu suspenso oculto inicialmente */
+    display: flex; /* Menu suspenso oculto inicialmente */
     position: absolute;
     background-color: white;
     border-radius: 5px;
     padding: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    top: 50px;
-    right: 50px;
+    top: 83%;
+    right: 0;
+    z-index: 10;
+    width: 13rem;
+    height: 4rem;
 }
 
 .dropdown-menu .location-button {
@@ -371,23 +374,32 @@ input[type]:checked~span.mid {
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 0.5rem;
 }
 
 .dropdown-menu .location-button:hover {
-    background-color: #f5f5f5;
+    background-color: #fdfcfc;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.dropdown-menu .camera-button:hover {
+    background-color: #fdfcfc;
+    border-radius: 10px;
+    transition: 0.5s;
 }
 
 /* Estilos para o menu suspenso */
 .dropdown-menu {
     display: none; /* Menu suspenso oculto inicialmente */
-    position: absolute; /* Posição absoluta em relação ao contêiner pai */
-    background-color: white; /* Cor de fundo do menu */
-    border-radius: 5px; /* Bordas arredondadas */
-    padding: 0.5rem; /* Espaçamento interno do menu */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
-    top: 84%; /* Ajustar a posição para que fique acima do botão "+" */
-    right: 0; /* Alinhar à direita do botão "+" */
-    z-index: 10; /* Garante que o menu fique acima de outros elementos */
+    position: absolute;
+    background-color: #adc7ff;
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top: 81%;
+    right: 0;
+    z-index: 10;
+    height: 5rem;
 }
 
 .add-button {
@@ -426,6 +438,8 @@ input[type]:checked~span.mid {
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    text-align: center;
 }
 
 .camera-container {

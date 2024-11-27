@@ -15,6 +15,10 @@ if ($_SESSION['permissao'] === "ADM") {
 } else {
     header("Location: ../PHP/sair");
 }
+if ($_SESSION['permissao'] === "Banido") 
+{    
+    header("Location: ./Banido");
+}
 
 include '../PHP/ADM/protocolo.php';
 $manager = new protocolo();

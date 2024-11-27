@@ -85,7 +85,7 @@ if ($_SESSION['permissao'] === "ADM") {
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="./home.php">
                         <ion-icon name="code-working-outline"></ion-icon> Depuração
                     </a>
                 </li>

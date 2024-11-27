@@ -54,7 +54,7 @@
                 header("Location: ../view/home");
                
             } elseif ($row['permissao'] === "Banido") {
-                header("Location: ../view/BAM/");
+                header("Location: ../view/Banido");
 
             }
         } else {
@@ -67,3 +67,4 @@
 
 
     $conn->close();
+?>

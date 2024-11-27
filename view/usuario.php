@@ -7,6 +7,27 @@ if ((!isset($_SESSION['id']) == true) and (!isset($_SESSION['permissao']) == tru
     unset($_SESSION['permissao']);
     header("Location: ../index.php");
 }
+$_SESSION['usuario'];
+$_SESSION['permissao'];
+
+// Redirecionar para a página de login
+if ($_SESSION['permissao'] === "Banido") 
+{    
+    header("Location: ./Banido");
+}
+
+include '../PHP/ADM/protocolo.php';
+$manager = new protocolo();
+
+$banana = new protocolo();
+$id = $_SESSION['id'];
+foreach ($banana->list_client_by_id($id) as $oi) {
+    $usuario = $oi['nome'];
+    $permisao = $oi['permissao'];
+    $_SESSION['usuario'] = $oi['nome'];
+    $_SESSION['permissao'] = $oi['permissao'];
+}
+
 $tudo = $_SESSION['tudo'];
 //-----------------------------------------
 $nome =$tudo['nome'];

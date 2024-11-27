@@ -1,6 +1,24 @@
 <?php
 include '../PHP/ProtocoloUser/protocolouser.php';
 $manager = new protocoloUser();
+session_start();
+//print_r($_SESSION);
+if ((!isset($_SESSION['id']) == true) and (!isset($_SESSION['permissao']) == true)) {
+    unset($_SESSION['id']);
+    unset($_SESSION['usuario']);
+    unset($_SESSION['permissao']);
+    header("Location: ../index.php");
+}
+$_SESSION['usuario'];
+$_SESSION['permissao'];
+
+// Redirecionar para a página de login
+if ($_SESSION['permissao'] === "Banido") {
+    header("Location: ./Banido");
+}
+
+$usuario = $_SESSION['usuario'];
+$permisao = $_SESSION['permissao'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,73 +41,82 @@ $manager = new protocoloUser();
 
 <body>
 
-<nav class="menu-nav">
+    <nav class="menu-nav">
 
-<div class="menutoggle" id="menutoggle">
-    <label for="check" class="menuButton">
-        <input id="check" type="checkbox">
-        <span class="top"></span>
-        <span class="mid"></span>
-        <span class="bot"></span>
-    </label>
-</div>
-
-<a href="../User/Index.html">
-    <div class="perfil">
-        <h3>Usuario <br><samp>aaaaa</samp></h3>
-        <div class="imgcx">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="...">
-        </div>
-    </div>
-</a>
-
-<div class="menu">
-    <ul>
-        <li>
-            <a href="">
-                <ion-icon name="file-tray-outline"></ion-icon>
-                Biblioteca
-            </a>
-        </li>
-        <li>
-            <a href="./config.html">
-                <ion-icon name="settings-outline"></ion-icon>
-                Comfiguração
-            </a>
-        </li>
-
-        <li>
-            <a href="./Chat.html">
-                <ion-icon name="chatbox-ellipses-outline"></ion-icon>
-                Chat
-            </a>
-        </li>
-
-        <li>
-            <a href="./carrinho.html">
-                <ion-icon name="bag-outline"></ion-icon> Carrinho
-            </a>
-        </li>
-
-        <div class="menuextra">
-
-            <li class="menuextrali">
-                <a href="../PHP/sair.php">
-                    <ion-icon name="log-out-outline"></ion-icon> Deslogar
-                </a>
-            </li>
-
-            <li class="menuextrali2">
-                <a href="./home.php">
-                    <ion-icon name="home-outline"></ion-icon> Home
-                </a>
-            </li>
-
+        <div class="menutoggle" id="menutoggle">
+            <label for="check" class="menuButton">
+                <input id="check" type="checkbox">
+                <span class="top"></span>
+                <span class="mid"></span>
+                <span class="bot"></span>
+            </label>
         </div>
 
-    </ul>
-</div>
-</nav>
+        <a href="./usuario">
+            <div class="perfil">
+
+                <?php
+                echo "<h3> $usuario <br><samp>$permisao</samp></h3>"
+                ?>
+
+                <div class="imgcx">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="...">
+                </div>
+            </div>
+        </a>
+
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="">
+                        <ion-icon name="file-tray-outline"></ion-icon>
+                        Biblioteca
+                    </a>
+                </li>
+                <li>
+                    <a href="./config.php">
+                        <ion-icon name="settings-outline"></ion-icon>
+                        Comfiguração
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./Chat.php">
+                        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                        Chat
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./carrinho.HTML">
+                        <ion-icon name="bag-outline"></ion-icon> Carrinho
+                    </a>
+                </li>
+                <?php
+                if ($permisao === 'ADM') {
+                    echo " <li> <a href='./ADM_home'> <ion-icon name='people-circle-outline'></ion-icon> Home ADM </a> </li>";
+                }
+                ?>
+
+                <div class="menuextra">
+
+                    <li class="menuextrali">
+                        <a href="../PHP/sair.php">
+                            <ion-icon name="log-out-outline"></ion-icon> Deslogar
+                        </a>
+                    </li>
+
+                    <li class="menuextrali2">
+                        <a href="./home.php">
+                            <ion-icon name="home-outline"></ion-icon> Home
+                        </a>
+                    </li>
+
+                </div>
+
+            </ul>
+        </div>
+    </nav>
 
     <nav class="elementoscusos">
         <div class="abacusos">

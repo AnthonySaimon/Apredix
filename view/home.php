@@ -7,8 +7,25 @@ if ((!isset($_SESSION['id']) == true) and (!isset($_SESSION['permissao']) == tru
     unset($_SESSION['permissao']);
     header("Location: ../index.php");
 }
-$usuario = $_SESSION['usuario'];
-$permisao = $_SESSION['permissao'];
+$_SESSION['usuario'];
+$_SESSION['permissao'];
+
+// Redirecionar para a página de login
+if ($_SESSION['permissao'] === "Banido") {
+    header("Location: ./Banido");
+}
+
+include '../PHP/ADM/protocolo.php';
+$manager = new protocolo();
+
+$banana = new protocolo();
+$id = $_SESSION['id'];
+foreach ($banana->list_client_by_id($id) as $oi) {
+    $usuario = $oi['nome'];
+    $permisao = $oi['permissao'];
+    $_SESSION['usuario'] = $oi['nome'];
+    $_SESSION['permissao'] = $oi['permissao'];
+}
 
 ?>
 
@@ -60,21 +77,21 @@ $permisao = $_SESSION['permissao'];
                     </a>
                 </li>
                 <li>
-                    <a href="./config.html">
+                    <a href="./config.php">
                         <ion-icon name="settings-outline"></ion-icon>
                         Comfiguração
                     </a>
                 </li>
 
                 <li>
-                    <a href="./Chat.html">
+                    <a href="./Chat.php">
                         <ion-icon name="chatbox-ellipses-outline"></ion-icon>
                         Chat
                     </a>
                 </li>
 
                 <li>
-                    <a href="./carrinho.html">
+                    <a href="./carrinho.HTML">
                         <ion-icon name="bag-outline"></ion-icon> Carrinho
                     </a>
                 </li>
@@ -93,7 +110,7 @@ $permisao = $_SESSION['permissao'];
                     </li>
 
                     <li class="menuextrali2">
-                        <a href="#">
+                        <a href="./home.php">
                             <ion-icon name="home-outline"></ion-icon> Home
                         </a>
                     </li>

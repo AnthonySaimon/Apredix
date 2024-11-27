@@ -1,3 +1,34 @@
+<?php
+session_start();
+//print_r($_SESSION);
+if ((!isset($_SESSION['id']) == true) and (!isset($_SESSION['permissao']) == true)) {
+    unset($_SESSION['id']);
+    unset($_SESSION['usuario']);
+    unset($_SESSION['permissao']);
+    header("Location: ../index.php");
+}
+$_SESSION['usuario'];
+$_SESSION['permissao'];
+
+// Redirecionar para a página de login
+if ($_SESSION['permissao'] === "Banido") {
+    header("Location: ./Banido");
+}
+
+include '../PHP/ADM/protocolo.php';
+$manager = new protocolo();
+
+$banana = new protocolo();
+$id = $_SESSION['id'];
+foreach ($banana->list_client_by_id($id) as $oi) {
+    $usuario = $oi['nome'];
+    $permisao = $oi['permissao'];
+    $_SESSION['usuario'] = $oi['nome'];
+    $_SESSION['permissao'] = $oi['permissao'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -7,7 +38,7 @@
     <title>Add Chat</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name="author" content="Anthony/MariaEduarda - Aprendix">
-    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/add_chat.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/Add_chat.css'>
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,13 +61,19 @@
             </label>
         </div>
 
-        <div class="perfil">
-            <h3>Usuario <br><samp>aaaaa </samp></h3>
-            <div class="imgcx">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s"
-                    alt="...">
+        <a href="./usuario">
+            <div class="perfil">
+
+                <?php
+                echo "<h3> $usuario <br><samp>$permisao</samp></h3>"
+                ?>
+
+                <div class="imgcx">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="...">
+                </div>
             </div>
-        </div>
+        </a>
+
         <div class="menu">
             <ul>
                 <li>
@@ -46,24 +83,29 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./config.html">
+                    <a href="./config.php">
                         <ion-icon name="settings-outline"></ion-icon>
                         Comfiguração
                     </a>
                 </li>
 
                 <li>
-                    <a href="./Chat.html">
+                    <a href="./Chat.php">
                         <ion-icon name="chatbox-ellipses-outline"></ion-icon>
                         Chat
                     </a>
                 </li>
 
                 <li>
-                    <a href="./carrinho.html">
+                    <a href="./carrinho.HTML">
                         <ion-icon name="bag-outline"></ion-icon> Carrinho
                     </a>
                 </li>
+                <?php
+                if ($permisao === 'ADM') {
+                    echo " <li> <a href='./ADM_home'> <ion-icon name='people-circle-outline'></ion-icon> Home ADM </a> </li>";
+                }
+                ?>
 
                 <div class="menuextra">
 
@@ -88,80 +130,14 @@
     <div class="addchat">
 
         <div class="conversas">
-            <img src="../imagem/ECG_chat.png" alt="">
-            <ul>
-                <h2>Nome do Chat</h2>
-                <h2>
-                    <li>Criador</li>
-                </h2>
-            </ul>
-            <a href="../Chat/index.html">
-                <div class="add">
-                    <ion-icon name="add-outline"></ion-icon>
-                </div>
-            </a>
+            <ion-icon name="warning-outline"></ion-icon>
+            <p>Não temos chat disponivel no momento</p>
         </div>
 
-        <div class="conversas">
-            <img src="../imagem/ECG_chat.png" alt="">
-            <ul>
-                <h2>Nome do Chat</h2>
-                <h2>
-                    <li>Criador</li>
-                </h2>
-            </ul>
-            <a href="../Chat/index.html">
-                <div class="add">
-                    <ion-icon name="add-outline"></ion-icon>
-                </div>
-            </a>
-        </div>
+    </div>
 
-        <div class="conversas">
-            <img src="../imagem/ECG_chat.png" alt="">
-            <ul>
-                <h2>Nome do Chat</h2>
-                <h2>
-                    <li>Criador</li>
-                </h2>
-            </ul>
-            <a href="../Chat/index.html">
-                <div class="add">
-                    <ion-icon name="add-outline"></ion-icon>
-                </div>
-            </a>
-        </div>
-
-        <div class="conversas">
-            <img src="../imagem/ECG_chat.png" alt="">
-            <ul>
-                <h2>Nome do Chat</h2>
-                <h2>
-                    <li>Criador</li>
-                </h2>
-            </ul>
-            <a href="../Chat/index.html">
-                <div class="add">
-                    <ion-icon name="add-outline"></ion-icon>
-                </div>
-            </a>
-        </div>
-
-        <div class="conversas">
-            <img src="../imagem/ECG_chat.png" alt="">
-            <ul>
-                <h2>Nome do Chat</h2>
-                <h2>
-                    <li>Criador</li>
-                </h2>
-            </ul>
-            <a href="">
-                <div class="add">
-                    <ion-icon name="add-outline"></ion-icon>
-                </div>
-            </a>
-        </div>
-
+    <div class="retonar">
+        <a href="./Chat.php">Retonar</a>
     </div>
 
 </body>

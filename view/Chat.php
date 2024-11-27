@@ -1,3 +1,33 @@
+<?php
+session_start();
+//print_r($_SESSION);
+if ((!isset($_SESSION['id']) == true) and (!isset($_SESSION['permissao']) == true)) {
+    unset($_SESSION['id']);
+    unset($_SESSION['usuario']);
+    unset($_SESSION['permissao']);
+    header("Location: ../index.php");
+}
+$_SESSION['usuario'];
+$_SESSION['permissao'];
+
+// Redirecionar para a página de login
+if ($_SESSION['permissao'] === "Banido") {
+    header("Location: ./Banido");
+}
+
+include '../PHP/ADM/protocolo.php';
+$manager = new protocolo();
+
+$banana = new protocolo();
+$id = $_SESSION['id'];
+foreach ($banana->list_client_by_id($id) as $oi) {
+    $usuario = $oi['nome'];
+    $permisao = $oi['permissao'];
+    $_SESSION['usuario'] = $oi['nome'];
+    $_SESSION['permissao'] = $oi['permissao'];
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -7,7 +37,7 @@
     <title>Chat</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name="author" content="Anthony/MariaEduarda - Aprendix">
-    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/Chat.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/CHat.css'>
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,14 +60,19 @@
             </label>
         </div>
 
+        <a href="./usuario">
+            <div class="perfil">
 
-        <div class="perfil">
-            <h3>Usuario <br><samp>aaaaa</samp></h3>
-            <div class="imgcx">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s"
-                    alt="...">
+                <?php
+                echo "<h3> $usuario <br><samp>$permisao</samp></h3>"
+                ?>
+
+                <div class="imgcx">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="...">
+                </div>
             </div>
-        </div>
+        </a>
+
         <div class="menu">
             <ul>
                 <li>
@@ -47,35 +82,40 @@
                     </a>
                 </li>
                 <li>
-                    <a href="../configuracao/index.html">
+                    <a href="./config.php">
                         <ion-icon name="settings-outline"></ion-icon>
                         Comfiguração
                     </a>
                 </li>
 
                 <li>
-                    <a href="../Chat/index.html">
+                    <a href="./Chat.php">
                         <ion-icon name="chatbox-ellipses-outline"></ion-icon>
                         Chat
                     </a>
                 </li>
 
                 <li>
-                    <a href="../modelo_cusos/carrinho.html">
+                    <a href="./carrinho.HTML">
                         <ion-icon name="bag-outline"></ion-icon> Carrinho
                     </a>
                 </li>
+                <?php
+                if ($permisao === 'ADM') {
+                    echo " <li> <a href='./ADM_home'> <ion-icon name='people-circle-outline'></ion-icon> Home ADM </a> </li>";
+                }
+                ?>
 
                 <div class="menuextra">
 
                     <li class="menuextrali">
-                        <a href="../sair.php">
+                        <a href="../PHP/sair.php">
                             <ion-icon name="log-out-outline"></ion-icon> Deslogar
                         </a>
                     </li>
 
                     <li class="menuextrali2">
-                        <a href="../home/index.php">
+                        <a href="./home.php">
                             <ion-icon name="home-outline"></ion-icon> Home
                         </a>
                     </li>
@@ -98,7 +138,7 @@
                 </ul>
             </div>
 
-            <a href="./adicionar_chat.html">
+            <a href="./adicionar_chat.php">
                 <div class="addchat">
                     <ion-icon name="add-outline"></ion-icon>
                 </div>
@@ -122,10 +162,14 @@
 
                 <!-- Menu suspenso que será mostrado quando clicar no botão "+" -->
                 <div class="dropdown-menu" id="dropdownMenu" style="display: none;">
+
                     <button type="button" class="location-button" id="locationButton">
-                        📍 Enviar Localização
+                        <ion-icon name="location-outline"></ion-icon> Enviar Localização
                     </button>
-                    <button class="camera-button">Enviar Foto</button> <!-- Novo botão da câmera -->
+
+                    <button class="camera-button">
+                        <ion-icon name="camera-outline"></ion-icon> Enviar Foto
+                    </button> <!-- Novo botão da câmera -->
                 </div>
             </form>
             <div class="camera-container" style="display: none;">
@@ -137,7 +181,6 @@
         </div>
 
         <script>
-
             const chatForm = document.getElementById('chatForm');
             const messageInput = document.getElementById('messageInput');
             const chatMessages = document.querySelector('.chat__messages');
@@ -148,7 +191,7 @@
             // Enviar mensagem
 
             // Enviar mensagem
-            chatForm.addEventListener('submit', function (event) {
+            chatForm.addEventListener('submit', function(event) {
                 event.preventDefault(); // Evitar o comportamento padrão do formulário
 
                 const messageText = messageInput.value.trim();
@@ -166,14 +209,14 @@
 
 
             // Mostrar/Ocultar menu suspenso
-            addButton.addEventListener('click', function () {
+            addButton.addEventListener('click', function() {
                 dropdownMenu.style.display = dropdownMenu.style.display === 'none' ? 'block' : 'none';
             });
 
             // Enviar localização
-            locationButton.addEventListener('click', function () {
+            locationButton.addEventListener('click', function() {
                 if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(function (position) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
                         const lat = position.coords.latitude;
                         const lon = position.coords.longitude;
                         // Adicionar a localização ao chat
@@ -193,7 +236,9 @@
                 if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                     try {
                         // Pede permissão para acessar a câmera
-                        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                        const stream = await navigator.mediaDevices.getUserMedia({
+                            video: true
+                        });
                         const video = document.getElementById('video');
                         video.srcObject = stream;
 
@@ -239,7 +284,6 @@
                 // Adiciona a mensagem ao chat
                 document.querySelector('.chat__messages').appendChild(messageContainer);
             }
-
         </script>
 
 </body>

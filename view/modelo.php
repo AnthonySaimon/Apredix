@@ -1,3 +1,34 @@
+<?php
+session_start();
+//print_r($_SESSION);
+if ((!isset($_SESSION['id']) == true) and (!isset($_SESSION['permissao']) == true)) {
+    unset($_SESSION['id']);
+    unset($_SESSION['usuario']);
+    unset($_SESSION['permissao']);
+    header("Location: ../index.php");
+}
+$_SESSION['usuario'];
+$_SESSION['permissao'];
+
+// Redirecionar para a página de login
+if ($_SESSION['permissao'] === "Banido") {
+    header("Location: ./Banido");
+}
+
+include '../PHP/ADM/protocolo.php';
+$manager = new protocolo();
+
+$banana = new protocolo();
+$id = $_SESSION['id'];
+foreach ($banana->list_client_by_id($id) as $oi) {
+    $usuario = $oi['nome'];
+    $permisao = $oi['permissao'];
+    $_SESSION['usuario'] = $oi['nome'];
+    $_SESSION['permissao'] = $oi['permissao'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -30,9 +61,13 @@
             </label>
         </div>
 
-        <a href='./usuario.html'>
+        <a href="./usuario">
             <div class="perfil">
-                <h3>Usuario <br><samp>aaaaa</samp></h3>
+
+                <?php
+                echo "<h3> $usuario <br><samp>$permisao</samp></h3>"
+                ?>
+
                 <div class="imgcx">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="...">
                 </div>
@@ -48,24 +83,29 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./config.html">
+                    <a href="./config.php">
                         <ion-icon name="settings-outline"></ion-icon>
                         Comfiguração
                     </a>
                 </li>
 
                 <li>
-                    <a href="./Chat.html">
+                    <a href="./Chat.php">
                         <ion-icon name="chatbox-ellipses-outline"></ion-icon>
                         Chat
                     </a>
                 </li>
 
                 <li>
-                    <a href="./carrinho.html">
+                <a href="./carrinho.HTML">
                         <ion-icon name="bag-outline"></ion-icon> Carrinho
                     </a>
                 </li>
+                <?php
+                if ($permisao === 'ADM') {
+                    echo " <li> <a href='./ADM_home'> <ion-icon name='people-circle-outline'></ion-icon> Home ADM </a> </li>";
+                }
+                ?>
 
                 <div class="menuextra">
 

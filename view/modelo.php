@@ -61,23 +61,21 @@ foreach ($banana->list_client_by_id($id) as $oi) {
             </label>
         </div>
 
-        <a href="./usuario">
-            <div class="perfil">
+        <div class="perfil">
 
-                <?php
-                echo "<h3> $usuario <br><samp>$permisao</samp></h3>"
-                ?>
+            <?php
+            echo "<h3> $usuario <br><samp>$permisao</samp></h3>"
+            ?>
 
-                <div class="imgcx">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="...">
-                </div>
+            <div class="imgcx">
+                <img src="../imagem/Apredix_user.png" alt="...">
             </div>
-        </a>
+        </div>
 
         <div class="menu">
             <ul>
                 <li>
-                    <a href="">
+                    <<a href="./biblioteca.php">
                         <ion-icon name="file-tray-outline"></ion-icon>
                         Biblioteca
                     </a>
@@ -85,7 +83,7 @@ foreach ($banana->list_client_by_id($id) as $oi) {
                 <li>
                     <a href="./config.php">
                         <ion-icon name="settings-outline"></ion-icon>
-                        Comfiguração
+                        Configuração
                     </a>
                 </li>
 
@@ -97,7 +95,7 @@ foreach ($banana->list_client_by_id($id) as $oi) {
                 </li>
 
                 <li>
-                <a href="./carrinho.HTML">
+                    <a href="./carrinho.HTML">
                         <ion-icon name="bag-outline"></ion-icon> Carrinho
                     </a>
                 </li>

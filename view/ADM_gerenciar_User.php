@@ -99,7 +99,8 @@ foreach ($banana->list_client_by_id($id) as $oi) {
 
                 <li>
                     <a href="./home">
-                        <ion-icon name="code-working-outline"></ion-icon> Depuração
+                        <ion-icon name="home-outline"></ion-icon>
+                            Home Usuario
                     </a>
                 </li>
 

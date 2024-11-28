@@ -34,8 +34,9 @@ class protocoloUser extends Conexao
     public function add_comentario($data)
     {
         $coment = $_POST['comentario'];
+        $iduser = $_POST['iduser'];
 
-        $sql = "INSERT INTO  comentarios ( id, comentario) VALUES (null,'$coment')";
+        $sql = "INSERT INTO  comentarios ( id, iduser, comentario) VALUES (null,'$coment')";
         $pdo = parent::get_instance();
         if ($pdo->query($sql) === TRUE) {
             header("Location: ../modelo_cusos/index.php");

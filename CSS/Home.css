@@ -8,22 +8,28 @@
 
 body {
     background-color: #f2f5f7;
-    height: 100vh;
+    width: 100%;
 }
 /* logo */
 
 .menu-nav {
-    position: relative;
     top: 1px;
     width: 100%;
     height: 80px;
-    background-color: #1b7bbba4;
+    background-color: #373d4e;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    box-shadow: 0 50px 50px rgba(0, 0, 0 .1);
     margin-top: -1px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+.inv{
+    height: 7rem;
 }
 
 
@@ -327,14 +333,14 @@ input[type]:checked~span.mid {
 }
 
 .abacusos {
-    padding: 2%;
-    width: 100%;
-    height: 22rem;
-}
+     /* padding: 2%; */
+     width: 100%;
+     /* height: 22rem; */
+ }
 
 .abacusos .nome h2 {
     background-color: #999;
-    width: 5.5%;
+    width: 20%;
     padding: 0.5%;
     border-radius: 15px;
 }
@@ -342,13 +348,9 @@ input[type]:checked~span.mid {
 .cusos {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.abacusos .cusos {
-    width: 100%;
-    height: 80%;
-    padding: 1%;
-}
 .elemento{
     display: flex;
 }
@@ -358,6 +360,7 @@ input[type]:checked~span.mid {
     border-radius: 15px;
     background-color: rgb(102, 102, 102);
     overflow: hidden;
+    margin: 1rem;
 }
 
 .abacusos .cusos .elemento img {
@@ -379,4 +382,17 @@ input[type]:checked~span.mid {
     width: 50%;
     height: 100%;
     object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    .slider {
+        display: none;
+        margin: 3rem auto;
+        width: 80rem;
+        height: 40rem;
+        overflow: hidden;
+    }
+    .abacusos .nome h2 {
+        margin-top: 10rem;
+    }
 }

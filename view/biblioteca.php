@@ -38,8 +38,14 @@ foreach ($banana->list_client_by_id($id) as $oi) {
     <title>Aprendix</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name="author" content="Anthony/MariaEduarda - Aprendix">
-    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/home.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/biblioteca.css'>
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
@@ -57,19 +63,19 @@ foreach ($banana->list_client_by_id($id) as $oi) {
 
         <div class="perfil">
 
-            <?php
-            echo "<h3> $usuario <br><samp>$permisao</samp></h3>"
-            ?>
+                <?php
+                echo "<h3> $usuario <br><samp>$permisao</samp></h3>"
+                ?>
 
-            <div class="imgcx">
-                <img src="../imagem/Apredix_user.png" alt="...">
+                <div class="imgcx">
+                    <img src="../imagem/Apredix_user.png" alt="...">
+                </div>
             </div>
-        </div>
 
         <div class="menu">
             <ul>
                 <li>
-                    <a href="./biblioteca.php">
+                <a href="./biblioteca.php">
                         <ion-icon name="file-tray-outline"></ion-icon>
                         Biblioteca
                     </a>
@@ -120,95 +126,11 @@ foreach ($banana->list_client_by_id($id) as $oi) {
     </nav>
 
 
-
-    <div class="slider">
-
-        <div class="slides">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
-
-            <div class="slide first">
-                <img src="../imagem/slider_1.png" alt="natureza">
-            </div>
-
-            <div class="slide">
-                <img src="../imagem/slider_2.png" alt="natureza">
-            </div>
-
-            <div class="slide">
-                <img src="../imagem/Aprendix_sem_foto.png" alt="natureza">
-            </div>
-
-            <div class="slide">
-                <img src="../imagem/Aprendix_sem_foto.png" alt="natureza">
-            </div>
-
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-            </div>
-
-        </div>
-
-        <div class="manual-navigation">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
-        </div>
-
-    </div>
-
     <div class="abacusos">
-        <div class="nome">
-            <h2>Seu Cusos</h2>
-        </div>
 
-        <div class="cusos">
-
-            <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="./cusos.php">
-                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
-                </a>
-            </div>
-
-            <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="./cusos.php">
-                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
-                </a>
-            </div>
-
-            <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="./cusos.php">
-                    <img src="..//imagem/Aprendix_sem_cusos.png" alt="cusos">
-                </a>
-            </div>
-
-            <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="./cusos.php">
-                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
-                </a>
-            </div>
-
-            <div class="elemento">
-                <div class="fotoaba"><img class="ing" src="../imagem/Logo-aprendix.png" alt=""></div>
-                <a href="./cusos.php">
-                    <img src="../imagem/Aprendix_sem_cusos.png" alt="cusos">
-                </a>
-            </div>
-
-        </div>
 
         <div class="nome">
-            <h2>Cusos</h2>
+            <h2>Seu cursos</h2>
         </div>
 
         <div class="cusos">
@@ -251,11 +173,10 @@ foreach ($banana->list_client_by_id($id) as $oi) {
         </div>
 
     </div>
-
 
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script defer src='../Javascript/home/main.js'></script>
+<script src='../Javascript/home/main.js'></script>
 
 </html>

@@ -6,13 +6,10 @@
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: #ffffff;
     height: 100vh;
     box-sizing: border-box;
     font-family: 'Courier Gothic', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .menu-nav {
@@ -227,64 +224,58 @@ input[type]:checked~span.mid {
     transform: translateX(-20px);
     opacity: 0;
 }
-
-.user{
-    z-index: 1;
-    position: relative;
-    width: 85%;
-    background-color: #666;
-    top: 4rem;
-    left: 8.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 15px;
+.abacusos {
+    padding: 2%;
+    width: 100%;
+    height: 22rem;
 }
-.aba1{
-    margin-top: 1.5rem;
-    width: 43%;
-    background-color: #666;
+.abacusos .nome h2 {
+    background-color: #999;
+    padding: 0.5%;
     border-radius: 15px;
+    text-align: center;
+}
+
+.cusos {
     display: flex;
     justify-content: space-evenly;
-    padding: 1rem;
     flex-wrap: wrap;
 }
-.lado2{
-    padding: 0.5rem;
-    border-radius: 25px;
-    background-color: #8a8a8a;
-    width: 38rem;
+
+.abacusos .cusos {
+    width: 100%;
+    height: 80%;
+    padding: 1%;
+}
+.elemento{
+    display: flex;
+    margin: 1rem;
+}
+.abacusos .cusos .elemento {
+    width: 20rem;
+    height: 12rem;
+    border-radius: 15px;
+    background-color: rgb(102, 102, 102);
+    overflow: hidden;
+}
+
+.abacusos .cusos .elemento img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fotoaba{
+    position: absolute;
+    width: 5rem;
+    height: 3rem;
+    background-color: #666;
+    border-radius: 15px 0 15px 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
-.input-style {
-    margin: 0.5rem;
-    height: 3rem;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #555;
-    outline: none;
-    text-decoration: none;
-    background-color: white;  
-  }
-  .input-style2 {
-    margin: 0.5rem;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #555;
-    outline: none;
-    text-decoration: none;
-    background-color: white; 
-    height: 2.5rem;
-   }
-  .input-style:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
+.abacusos .cusos .elemento .fotoaba .ing{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}

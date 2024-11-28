@@ -27,7 +27,7 @@ if ($_SESSION['permissao'] === "ADM") {
     <title>Aprendix ADM</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name="author" content="Anthony/MariaEduarda - Aprendix">
-    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/home_adm.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/Home_adm.css'>
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,10 +57,10 @@ if ($_SESSION['permissao'] === "ADM") {
             ?>
 
             <div class="imgcx">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s"
-                    alt="...">
+                <img src="../imagem/Apredix_user.png" alt="...">
             </div>
         </div>
+
         <div class="menu">
             <ul>
                 <li>
@@ -85,11 +85,11 @@ if ($_SESSION['permissao'] === "ADM") {
                 </li>
 
                 <li>
-                    <a href="./home.php">
-                        <ion-icon name="code-working-outline"></ion-icon> Depuração
+                    <a href="./home">
+                        <ion-icon name="home-outline"></ion-icon>
+                            Home Usuario
                     </a>
                 </li>
-
 
                 <div class="menuextra">
 
@@ -100,7 +100,7 @@ if ($_SESSION['permissao'] === "ADM") {
                     </li>
 
                     <li class="menuextrali2">
-                        <a href="">
+                        <a href="./ADM_home.php">
                             <ion-icon name="home-outline"></ion-icon> Home
                         </a>
                     </li>
@@ -111,29 +111,6 @@ if ($_SESSION['permissao'] === "ADM") {
         </div>
     </nav>
 
-    <div class="avisos">
-
-        <div class="celulaDNC">
-            <h2>+99</h2>
-            <h3>Denuncia</h3>
-        </div>
-
-        <div class="celulaBAN">
-            <h2>+99</h2>
-            <h3>Banidos</h3>
-        </div>
-
-        <div class="celulaSCT">
-            <h2>+99</h2>
-            <h3>Solicitasao</h3>
-        </div>
-
-        <div class="celulaUSE">
-            <h3>Usuario Ativo</h3>
-            <h2>+99</h2>
-        </div>
-
-    </div>
 
 
 </body>

@@ -28,22 +28,20 @@ foreach ($banana->list_client_by_id($id) as $oi) {
 }
 
 ?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Add Chat</title>
+    <title>Configurações</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name="author" content="Anthony/MariaEduarda - Aprendix">
-    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/Add_chat.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/Config.css'>
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=SUSE:wght@100..800&display=swap"
         rel="stylesheet">
 
 </head>
@@ -61,7 +59,7 @@ foreach ($banana->list_client_by_id($id) as $oi) {
             </label>
         </div>
 
-        <a href="./usuario">
+   
             <div class="perfil">
 
                 <?php
@@ -69,10 +67,9 @@ foreach ($banana->list_client_by_id($id) as $oi) {
                 ?>
 
                 <div class="imgcx">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="...">
+                    <img src="../imagem/Apredix_user.png" alt="...">
                 </div>
             </div>
-        </a>
 
         <div class="menu">
             <ul>
@@ -85,7 +82,7 @@ foreach ($banana->list_client_by_id($id) as $oi) {
                 <li>
                     <a href="./config.php">
                         <ion-icon name="settings-outline"></ion-icon>
-                        Comfiguração
+                        Configuração
                     </a>
                 </li>
 
@@ -127,22 +124,73 @@ foreach ($banana->list_client_by_id($id) as $oi) {
         </div>
     </nav>
 
-    <div class="addchat">
+    <div class="inv"></div>
 
-        <div class="conversas">
-            <ion-icon name="warning-outline"></ion-icon>
-            <p>Não temos chat disponivel no momento</p>
+    <div class="janelas">
+
+        <div class="janelas1">
+
+            <a href="./config.php" class="caixa">
+                <ion-icon name="person-outline"></ion-icon>
+                Usuario
+            </a>
+
+            <a href="./config_pagamento.php" class="caixa">
+                <ion-icon name="wallet-outline"></ion-icon>
+                Pagamento
+            </a>
+
+            <a href="./config_Segurancao.php" class="on">
+                <ion-icon name="eye-off-outline"></ion-icon>
+                Senha e Seguranção
+            </a>
+
+            <a href="./config_ET.php" class="caixa">
+                <ion-icon name="git-compare-outline"></ion-icon>
+                Conexão
+            </a>
+
+            <a href="./config_ET.php" class="caixa">
+                <ion-icon name="file-tray-full-outline"></ion-icon>
+                Historico
+            </a>
+
+        </div>
+
+        <div class="janelas2">
+
+            <h2 class="titulo">Senha e Seguranção</h2>
+
+            <div class="form1">
+
+                <form method="POST" action="../imagem/404error.gif">
+                    <h4>Digite sua senha antiga</h4>
+                    <div>
+                        <input type="text" name="senhaa" class="input-style" id="">
+                    </div>
+                    <h4>Sua nova senha</h4>
+                    <div>
+
+                        <input type="text" name="senhan" class="input-style" id="">
+                    </div>
+                    <h4>Confirme sua nova senha</h4>
+                    <div>
+                        <input type="text" name="senhann" class="input-style" id="">
+                        <button type="submit"><ion-icon name="reload-outline"></ion-icon></button>
+                    </div>
+                </form>
+            </div>
+
+
+
         </div>
 
     </div>
 
-    <div class="retonar">
-        <a href="./Chat.php">Retonar</a>
-    </div>
-
 </body>
+
+<script src='../Javascript/home/main.js'></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src='../Javascript/home/main.js'></script>
 
 </html>

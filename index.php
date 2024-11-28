@@ -50,9 +50,9 @@ if (isset($_GET['erro'])) {
                     if (isset($_GET['erro'])) {
                         $erro = $_GET['erro'];
                         if ($erro == 1) {
-                            echo  '<ion-icon name="warning"></ion-icon> <p>erro, eu so o melhor</p>';
+                            echo  '<ion-icon name="warning"></ion-icon> <p>Erro, Sua senha esta Incorreta</p>';
                         } elseif ($erro == 2) {
-                            echo '<ion-icon name="warning"></ion-icon> <p>erro, eu so o melhor</p>';
+                            echo '<ion-icon name="warning"></ion-icon> <p>Erro, E-mail não encontrado</p>';
                         }
                     }
                     ?>

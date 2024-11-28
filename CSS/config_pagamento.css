@@ -6,15 +6,14 @@
 }
 
 body {
-    background-color: antiquewhite;
-    height: 100vh;
-    box-sizing: border-box;
-    font-family: 'Courier Gothic', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #e0e0e0;
+    text-decoration: none;
+    list-style: none;
 }
-
+a{
+    text-decoration:none;
+    color: #000000;
+}
 .menu-nav {
     top: 1px;
     width: 100%;
@@ -34,8 +33,7 @@ body {
 .inv{
     height: 7rem;
 }
-
-
+/* logo */
 .menu-nav .perfil {
     display: flex;
     justify-content: flex-end;
@@ -81,7 +79,6 @@ body {
     width: 15rem;
     min-height: 100px;
     background-color: white;
-    box-shadow: 0 50px 50px rgba(0, 0, 0 .1);
     user-select: none;
     opacity: 0;
     visibility: hidden;
@@ -165,6 +162,7 @@ body {
     font-size: 0.8rem;
     margin-left: 0.5rem;
 }
+
 .menu-nav .menu .menuextra .menuextrali2:hover {
     background-color: #8cbdfd;
     transition: 0.7s;
@@ -228,41 +226,92 @@ input[type]:checked~span.mid {
     opacity: 0;
 }
 
-.user{
-    z-index: 1;
-    position: relative;
-    width: 85%;
-    background-color: #666;
-    top: 4rem;
-    left: 8.5rem;
+
+
+.janelas {
+    width: 100%;
+    height: 91.4vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 1rem;
-    border-radius: 15px;
 }
-.aba1{
-    margin-top: 1.5rem;
-    width: 43%;
-    background-color: #666;
-    border-radius: 15px;
+
+.janelas .janelas1 {
+    width: 25rem;
+    height: 91.3vh;
     display: flex;
-    justify-content: space-evenly;
-    padding: 1rem;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    border-right: 1px #d1d1d1 solid;
 }
-.lado2{
-    padding: 0.5rem;
-    border-radius: 25px;
-    background-color: #8a8a8a;
-    width: 38rem;
+
+.janelas .janelas1 .caixa {
+    width: 100%;
+    height: 5rem;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #343333;
+    border-bottom: 1px #d1d1d1 solid;
 }
+
+.janelas .janelas1 .caixa ion-icon {
+    font-size: 2rem;
+    margin: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.janelas .janelas1 .caixa:hover {
+    background-color: #a0a0a0;
+    color: rgb(0, 0, 0);
+    transition: 0.1s;
+}
+
+.on {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #343333;
+    border-bottom: 1px #d1d1d1 solid;
+    background-color: #979797;
+}
+
+.on ion-icon {
+    font-size: 2rem;
+    margin: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.janelas .janelas2 {
+    margin-top: 14rem;
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem 0 0 2rem;
+}
+
+.janelas2 .titulo {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.janelas2 .Ppart {
+    margin-top: 1rem;
+    width: 50rem;
+}
+
+#flex {
+    display: flex;
+}
+
 .input-style {
-    margin: 0.5rem;
-    height: 3rem;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    width: 18rem;
+    height: 3.5rem;
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -270,21 +319,181 @@ input[type]:checked~span.mid {
     color: #555;
     outline: none;
     text-decoration: none;
-    background-color: white;  
-  }
-  .input-style2 {
-    margin: 0.5rem;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #555;
-    outline: none;
-    text-decoration: none;
-    background-color: white; 
-    height: 2.5rem;
-   }
-  .input-style:focus {
+    background-color: white;
+}
+
+.input-style:focus {
     border-color: #007bff;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
+}
+
+.form1 {
+    margin-top: 3rem;
+    display: flex;
+}
+
+.form1 div {
+    margin-top: 0.3rem;
+    padding: 0 2rem 0 0.5rem;
+    display: flex;
+}
+
+.form1 ion-icon {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.form1 h4 {
+    font-size: 1.5rem;
+}
+
+.Ppart h3 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form1 button {
+    width: 4rem;
+    height: 3.5rem;
+    background-color: #007bff;
+    border-radius: 5px;
+    border: 0px solid;
+    cursor: pointer;
+}
+
+.abaexcluir {
+    margin-top: 3rem;
+    border: 1px black solid;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 55%;
+}
+
+.abaexcluir h2 {
+    margin-bottom: 2rem;
+}
+
+.abaexcluir button {
+    margin-top: 2rem;
+    background-color: rgb(255, 73, 73);
+    width: 10rem;
+    height: 3.5rem;
+    border-radius: 10px;
+    border: 0px solid;
+    cursor: pointer;
+    margin-left: 40rem;
+}
+
+.abaexcluir p {
+    width: 50rem;
+}
+
+.conversas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    height: 20rem;
+}
+
+.conversas ion-icon {
+    font-size: 5rem;
+    color: #ff9c40;
+}
+
+.conversas p {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.erro {
+    height: 20rem;
+    background-color: #818181b6;
+    border-style: dashed;
+    margin: 20px;
+}
+
+/* From Uiverse.io by abdinejad */ 
+.card-container,
+.card-box,
+.card-head,
+.card-number-row,
+.card-details,
+.card-holder-col,
+.card-date-col {
+  display: flex;
+}
+.card-container {
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.card-box {
+  width: 340px;
+  min-height: 160px;
+  background: #fff;
+  box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  margin: 16px;
+  padding: 1.5em;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.2em;
+}
+.card-head {
+  justify-content: space-between;
+  align-items: center;
+}
+.card-chip svg {
+  width: 32px;
+  height: 32px;
+}
+.card-chip svg path {
+  fill: #636363;
+}
+.card-logo svg {
+  width: 48px;
+  height: 48px;
+}
+.card-number-row {
+  justify-content: center;
+  word-spacing: 1em;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.card-box:hover .card-number-row {
+  font-size: 1.32em;
+}
+.card-details {
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.card-holder-col {
+  flex-direction: column;
+  gap: 2px;
+}
+.card-holder-title,
+.card-date-title {
+  color: #bdbdbd;
+  font-size: 0.7em;
+}
+.card-holder-name {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.card-date-col {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+.janelas2 a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12rem;
+    height: 3rem;
+    background-color: #8cbdfd;
+    border-radius: 15px;
+    color: white;
+}

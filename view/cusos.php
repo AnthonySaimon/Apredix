@@ -9,9 +9,6 @@ if ((!isset($_SESSION['id']) == true) and (!isset($_SESSION['permissao']) == tru
     unset($_SESSION['permissao']);
     header("Location: ../index.php");
 }
-$_SESSION['usuario'];
-$_SESSION['permissao'];
-
 // Redirecionar para a página de login
 if ($_SESSION['permissao'] === "Banido") {
     header("Location: ./Banido");
@@ -29,7 +26,7 @@ $permisao = $_SESSION['permissao'];
     <title>Aprendix</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name="author" content="Anthony/MariaEduarda - Aprendix">
-    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/Modelo_cusos.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/modelo_cusos.css'>
     <link rel="shortcut icon" href="../../imagem/Logo-aprendix.png" type="image/ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,23 +49,21 @@ $permisao = $_SESSION['permissao'];
             </label>
         </div>
 
-        <a href="./usuario">
-            <div class="perfil">
+        <div class="perfil">
 
-                <?php
-                echo "<h3> $usuario <br><samp>$permisao</samp></h3>"
-                ?>
+            <?php
+            echo "<h3> $usuario <br><samp>$permisao</samp></h3>"
+            ?>
 
-                <div class="imgcx">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="...">
-                </div>
+            <div class="imgcx">
+                <img src="../imagem/Apredix_user.png" alt="...">
             </div>
-        </a>
+        </div>
 
         <div class="menu">
             <ul>
                 <li>
-                    <a href="">
+                <a href="./biblioteca.php">
                         <ion-icon name="file-tray-outline"></ion-icon>
                         Biblioteca
                     </a>
@@ -76,7 +71,7 @@ $permisao = $_SESSION['permissao'];
                 <li>
                     <a href="./config.php">
                         <ion-icon name="settings-outline"></ion-icon>
-                        Comfiguração
+                        Configuração
                     </a>
                 </li>
 
@@ -121,19 +116,19 @@ $permisao = $_SESSION['permissao'];
     <nav class="elementoscusos">
         <div class="abacusos">
             <div class="aba1">
-                <img class="abaimg" src="../../imagem/Aprendix_sem_foto.png" alt="">
+                <img class="abaimg" src="../imagem/Aprendix_sem_foto.png" alt="">
 
                 <div class="subfotos">
                     <div class="elementofotos">
-                        <img src="../../imagem/Aprendix_sem_foto.png" alt="">
+                        <img src="../imagem/Aprendix_sem_foto.png" alt="">
                     </div>
 
                     <div class="elementofotos">
-                        <img src="../../imagem/Aprendix_sem_foto.png" alt="">
+                        <img src="../imagem/Aprendix_sem_foto.png" alt="">
                     </div>
 
                     <div class="elementofotos">
-                        <img src="../../imagem/Aprendix_sem_foto.png" alt="">
+                        <img src="../imagem/Aprendix_sem_foto.png" alt="">
                     </div>
                 </div>
             </div>
@@ -182,15 +177,16 @@ $permisao = $_SESSION['permissao'];
         <div class="fscoment" id="comentario-1">
             <div class="user">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="">
-                <h2 id="usuario-1">Nome de usuario</h2>
+                <h2 id="usuario-1"><?php echo  $usuario; ?></h2>
             </div>
 
             <div class="input-container">
                 <form action="../../PHP/ProtocoloUser/adddcommit.php" method="POST" class="input-container" id="comentario-form">
                     <input type="text" name="comentario" id="input-comentario" required="">
+                    <input TYPE="hidden" class="input-style" value="<?= ($_SESSION['id']) ?>" disabled>
                     <label for="input-comentario" class="label">Escreva Aqui</label>
                     <div class="underline"></div>
-                    <button class="buteviar" type="submit"> <img src="../../imagem/bxs-send.png" alt=""> </button>
+                    <button class="buteviar" type="submit"> <img src="../imagem/bxs-send.png" alt=""> </button>
                 </form>
             </div>
         </div>

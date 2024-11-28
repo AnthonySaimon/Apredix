@@ -56,8 +56,6 @@ class protocolo extends Conexao
             $statement->bindValue(":permissao", $data['permissao'], PDO::PARAM_STR);
 
             $statement->execute();
-        } else {
-            header("Location: ../Gerenciar_user/index.php?erro2");
         }
     }
     public function Ban_client($data)

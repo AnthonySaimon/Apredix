@@ -12,7 +12,6 @@ body {
 }
 
 .menu-nav {
-    position: relative;
     top: 1px;
     width: 100%;
     height: 80px;
@@ -22,6 +21,14 @@ body {
     align-items: center;
     padding: 1rem;
     margin-top: -1px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+.inv{
+    height: 5rem;
 }
 
 /* logo */
@@ -259,7 +266,7 @@ input[type]:checked~span.mid {
     transition: 0.1s;
 }
 
-.on{
+.on {
     width: 100%;
     height: 5rem;
     display: flex;
@@ -270,6 +277,7 @@ input[type]:checked~span.mid {
     border-bottom: 1px #d1d1d1 solid;
     background-color: #979797;
 }
+
 .on ion-icon {
     font-size: 2rem;
     margin: 20px;
@@ -281,25 +289,27 @@ input[type]:checked~span.mid {
     width: 100%;
     height: 100%;
     background-color: #fff;
-    padding: 1rem 0 0 2rem ;
+    padding: 1rem 0 0 2rem;
 }
 
-.janelas2 .titulo{
+.janelas2 .titulo {
     margin-bottom: 1rem;
     font-size: 2rem;
 }
-.janelas2 .Ppart{
+
+.janelas2 .Ppart {
     margin-top: 1rem;
     width: 50rem;
 }
-#flex
-{
+
+#flex {
     display: flex;
 }
+
 .input-style {
     margin: 0 0.5rem 0.5rem 0.5rem;
     width: 18rem;
-    height:3.5rem;
+    height: 3.5rem;
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -307,37 +317,97 @@ input[type]:checked~span.mid {
     color: #555;
     outline: none;
     text-decoration: none;
-    background-color: white;  
-  }
-  .input-style:focus {
+    background-color: white;
+}
+
+.input-style:focus {
     border-color: #007bff;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
+}
 
-  .form1{
+.form1 {
     margin-top: 3rem;
     display: flex;
-  }
+}
 
-  .form1 div{
+.form1 div {
     margin-top: 0.3rem;
     padding: 0 2rem 0 0.5rem;
     display: flex;
-  }
+}
 
-  .form1 ion-icon{
+.form1 ion-icon {
     font-size: 1.5rem;
-    color:white;
-  }
-  .form1 h4{
-    font-size: 1.5rem;
-  }
+    color: white;
+}
 
-  .form1 button{
+.form1 h4 {
+    font-size: 1.5rem;
+}
+
+.Ppart h3 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form1 button {
     width: 4rem;
     height: 3.5rem;
     background-color: #007bff;
     border-radius: 5px;
     border: 0px solid;
     cursor: pointer;
-  } 
+}
+
+.abaexcluir {
+    margin-top: 3rem;
+    border: 1px black solid;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 55%;
+}
+
+.abaexcluir h2 {
+    margin-bottom: 2rem;
+}
+
+.abaexcluir button {
+    margin-top: 2rem;
+    background-color: rgb(255, 73, 73);
+    width: 10rem;
+    height: 3.5rem;
+    border-radius: 10px;
+    border: 0px solid;
+    cursor: pointer;
+    margin-left: 40rem;
+}
+
+.abaexcluir p {
+    width: 50rem;
+}
+
+.conversas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    height: 20rem;
+}
+
+.conversas ion-icon {
+    font-size: 5rem;
+    color: #ff9c40;
+}
+
+.conversas p {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.erro {
+    height: 20rem;
+    background-color: #818181b6;
+    border-style: dashed;
+    margin: 20px;
+}

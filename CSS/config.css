@@ -334,6 +334,7 @@ input[type]:checked~span.mid {
     margin-top: 0.3rem;
     padding: 0 2rem 0 0.5rem;
     display: flex;
+    flex-direction: column;
 }
 
 .form1 ion-icon {
@@ -410,4 +411,8 @@ input[type]:checked~span.mid {
     background-color: #818181b6;
     border-style: dashed;
     margin: 20px;
+}
+.flx{
+    display: flex;
+    flex-direction: column;
 }

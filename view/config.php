@@ -8,10 +8,8 @@ if ((!isset($_SESSION['id']) == true) and (!isset($_SESSION['permissao']) == tru
 }
 $_tudo = ($_SESSION['tudo']);
 
-$sobrenomes = $_tudo['sobrenome'];
 $email = $_tudo['email'];
 $senha = $_tudo['senha'];
-print_r($_SESSION['tudo']);
 // Redirecionar para a página de login
 if ($_SESSION['permissao'] === "Banido") {
     header("Location: ./Banido");
@@ -39,7 +37,7 @@ foreach ($banana->list_client_by_id($id) as $oi) {
     <title>Configurações</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name="author" content="Anthony/MariaEduarda - Aprendix">
-    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/config.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/Config.css'>
     <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -173,13 +171,19 @@ foreach ($banana->list_client_by_id($id) as $oi) {
                         <form method="POST" action="../PHP/ProtocoloUser/user_atualizar.php">
                             <h4>Nome de exibição</h4>
                             <div>
-                            <INPUT TYPE="hidden" name="id" value="<?php echo"$id" ?>">
-                            <INPUT TYPE="hidden" name="sobrenome" value="<?php echo "$sobrenome"?>">
-                            <INPUT TYPE="hidden" name="email" value="<?php echo "$email"?>">
-                            <INPUT TYPE="hidden" name="senha" value="<?php echo "$senha"?>">
-                            <INPUT TYPE="hidden" name="permissao" value="<?php echo "$permisao"?>">
-
-                                <input type="text" name="nome" class="input-style" id="">
+                                <INPUT TYPE="hidden" name="id" value="<?php echo "$id" ?>">
+                                <INPUT TYPE="hidden" name="sobrenome" value="">
+                                <INPUT TYPE="hidden" name="email" value="<?php echo "$email" ?>">
+                                <INPUT TYPE="hidden" name="senha" value="<?php echo "$senha" ?>">
+                                <INPUT TYPE="hidden" name="permissao" value="<?php echo "$permisao" ?>">
+                                <div class="flx">
+                                    <h4>Nome</h4>
+                                    <input type="text" name="nome" class="input-style" id="">
+                                </div>
+                                <div class="flx">
+                                    <h4>Sobrenome</h4>
+                                    <input type="text" name="sobrenome" class="input-style" id="">
+                                </div>
                                 <button type="submit"><ion-icon name="create-outline"></ion-icon></button>
                             </div>
                         </form>
@@ -200,20 +204,20 @@ foreach ($banana->list_client_by_id($id) as $oi) {
                 <p>Ao solicitar a exclusão da sua conta, todos os seus dados serão permanentemente apagados. Esta ação não pode ser desfeita.</p>
                 <form method="POST" action="../PHP/ADM/userDLT.php">
 
-                    <input type="hidden" name="id" value="<?php echo "$id" ?>">
+                    <input type="hidden" name="id" value="<?php echo "$id";   ?>">
 
                     <button type="submit">
                         <h3>Solicita Exclusão</h3>
                     </button>
                     <?php
-                                // Mostra mensagem de erro, se houver
-                                if (isset($_GET['erro'])) {
-                                    $erro = $_GET['erro'];
-                                    if ($erro == 1) {
-                                        echo  '<div class="C"><h3> Aconteceu um erro, estamos trabalhando nisso </h3></div>';
-                                    }
-                                }
-                                ?>
+                    // Mostra mensagem de erro, se houver
+                    if (isset($_GET['erro'])) {
+                        $erro = $_GET['erro'];
+                        if ($erro == 1) {
+                            echo  '<div class="C"><h3> Aconteceu um erro, estamos trabalhando nisso </h3></div>';
+                        }
+                    }
+                    ?>
                 </form>
             </div>
 

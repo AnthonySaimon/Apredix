@@ -29,10 +29,11 @@ $sql = "INSERT INTO usuario (nome, sobrenome, email, senha, permissao)
         VALUES ('$nome', '$sobrenome', '$email', '$senha','$permissao')";
 
 if ($conn->query($sql) === TRUE) {
-    header("Location: ../index.php");
+    header("Location: ../../index.php");
 } else {
     echo "Erro: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
 ?>
+<a href="../../index.php"></a>

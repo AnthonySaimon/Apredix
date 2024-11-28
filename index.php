@@ -38,7 +38,7 @@ if (isset($_GET['erro'])) {
                 <button class="logar1" type="submit">Logar</button>
                 <div class="oi">
                     <p>Não tem uma conta ?</p>
-                    <a class="logar2" href="./view/cadastro.html">Inscrevar-se</a>
+                    <a class="logar2" href="./view/cadastro.html">Inscreva-se</a>
                 </div>
 
             </form>

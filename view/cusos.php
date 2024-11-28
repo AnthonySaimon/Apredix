@@ -74,6 +74,12 @@ $permisao = $_SESSION['permissao'];
                         Configuração
                     </a>
                 </li>
+                <li>
+                    <a href="quiz1.html">
+                        <ion-icon name="settings-outline"></ion-icon>
+                        Quiz
+                    </a>
+                </li>
 
                 <li>
                     <a href="./Chat.php">

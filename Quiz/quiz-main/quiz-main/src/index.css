@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  color: white;
+}
+
+body,
+html {
+  min-height: 100vh;
+  height: 100%;
+  background-color: rgb(3, 3, 41);
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: .8rem 1.5rem;
+  background: linear-gradient(45deg, rgb(134, 10, 150), rgb(2, 2, 162));
+  border-radius: 3rem;
+  border: none;
+  transform: 0.5s;
+}
+
+button:hover {
+  background: linear-gradient(45deg, rgb(2, 2, 162), rgb(134, 10, 150));
+}
